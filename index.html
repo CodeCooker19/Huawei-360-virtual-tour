@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Huawei AI Lab Showroom</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no"/>
+
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+
+    <!-- A-frame -->
+    <script src="libraries/aframe/aframe.min.js"></script>
+    <script src="libraries/aframe/aframe-event-set-component.min.js"></script>
+    <script src="libraries/aframe/aframe-look-at-component.min.js"></script>
+
+
+    <!-- Video.js -->
+    <link href="libraries/videojs/video-js.css" rel="stylesheet" />
+
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="libraries/videojs/videojs-ie8.min.js"></script>
+
+    <link rel="stylesheet" href="libraries/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/staticpages.css">
+
+    <link rel="stylesheet" href="libraries/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/homepage-relizable.css">
+    <link rel="stylesheet" href="css/feedback-relizable.css">
+    <link rel="stylesheet" href="css/scene-relizable.css">
+    <link rel="stylesheet" href="css/instruction-relizable.css">
+    <link rel="stylesheet" href="css/partner.css">
+    <link rel="stylesheet" href="css/min-map.css">
+    <link rel="stylesheet" href="css/weigh.css">
+    
+
+</head>
+
+<body>
+    <div id="mobile" style="display: none; position: absolute; height: 100%; width:100%; z-index: 9000; background-color:white; text-align: center; align-content: center; align-items: center;">
+        <p style="width: 100%">This page is best experienced on a desktop browser.<br>The mobile version is under construction.</p>
+    </div>
+    
+    <div id="loading" style="display: block; position: absolute; height: 100%; width:100%; z-index: 5000; background-color:white; opacity: 1; pointer-events: none;">
+        <div>
+            <img class="huawei-logo" style="z-index: 1" src="images/ui/huawei.png">
+        </div>
+        <div class="container-fluid h-100 p-0">
+            <div class="jumbotron border-0 vertical-center" id="loading-background">
+                <video poster="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/loginbg.png" id="fullscreen-video" playsinline autoplay muted loop>
+                    <!-- 
+                        - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+                        WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+                    <source src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/videos/bg.mp4" type="video/mp4">
+
+                </video>
+
+                <div class="row w-100 mt-n5" style="z-index: 1; color:#444444">
+                    <img src="images/ui/ailab.png" id="loading-logo">
+
+                    <div class="text-center w-100 m-4 pt-4">
+                        <div class="spinner-border" style="width: 4rem; height: 4rem;" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+
+                    <h4 class="text-center w-100">
+                        Loading...
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--<a-scene embedded vr-mode-ui="enabled: false">-->
+    <a-scene vr-mode-ui="enabled: false" cursor="rayOrigin:mouse" log="Scene loaded" renderer="antialias: true">
+
+        <!-- Preloaded Assets -->
+        <a-assets>
+            <!-- Buttons -->
+            <img id="arrow-0" crossorigin="anonymous" src="images/ui/Nav_1.png">
+            <img id="arrow-hover" crossorigin="anonymous" src="images/ui/button_nav_hover.png">
+            
+            <img id="arrow-1" crossorigin="anonymous" src="images/ui/Nav_2.png">
+            <img id="arrow-2" crossorigin="anonymous" src="images/ui/Nav_3.png">
+            <img id="arrow-3" crossorigin="anonymous" src="images/ui/Nav_4.png">
+            
+            <img id="exit-0" crossorigin="anonymous" src="images/ui/Exit_1.png">
+            <img id="exit-1" crossorigin="anonymous" src="images/ui/Exit_2.png">
+            <img id="exit-2" crossorigin="anonymous" src="images/ui/Exit_3.png">
+            <img id="exit-3" crossorigin="anonymous" src="images/ui/Exit_4.png">
+
+            <img id="play" crossorigin="anonymous" src="images/ui/play_inactive.png">
+            <img id="play-hover" crossorigin="anonymous" src="images/ui/play_hover.png">
+
+            <img id="video" crossorigin="anonymous" src="images/ui/video_inactive.png">
+            <img id="video-hover" crossorigin="anonymous" src="images/ui/video_hover.png">
+
+            <img id="image" crossorigin="anonymous" src="images/ui/image_inactive.png">
+            <img id="image-hover" crossorigin="anonymous" src="images/ui/image_hover.png">
+
+            <img id="3d" crossorigin="anonymous" src="images/ui/button_3d_inactive.png">
+            <img id="3d-hover" crossorigin="anonymous" src="images/ui/button_3d_hover.png">
+
+
+            <img id="description-box" crossorigin="anonymous" src="images/ui/card_3.png">
+
+        </a-assets>
+
+        <!-- 360-degree image. -->
+        <a-sky geometry="segmentsHeight:256; segmentsWidth:64" material="dithering:100" id="image-360" src="images/backgrounds/entrance_00000.jpg" animation__fade="property: components.material.material.color; type: color; to: black; dur: 450; startEvents: fade" animation__fadeback="property: components.material.material.color; type: color; to: white; dur: 450; delay: 250; startEvents: animationcomplete__fade">
+        </a-sky>
+
+        <a-entity id="origin"></a-entity>
+
+        <!-- Camera -->
+        <a-camera id="camera" look-controls wasd-controls-enabled="false" hmdEnabled="false" touchEnabled="true" fov="90"></a-camera>
+    </a-scene>
+
+    <div id="navigation-bar" class="navigation-bar">
+        <img id="navigation-img" src="images/ui/bottom_nav.png">
+        <div class="row mx-1" id="bottom-nav">
+            <div class="col p-0 m-0">
+                <button type="button" class="w-100 bottom-nav-btn" id="minimap-btn" onclick="ShowIFrameContainer()"></button>
+            </div>
+            <div class="col p-0 m-0">
+                <button type="button" class="w-100 bottom-nav-btn" id="bottom-nav-btn" onclick="ShowFeedbackContainer()"></button>
+            </div>
+            <div class="col p-0 m-0">
+                <button type="button" class="w-100 bottom-nav-btn" id="bottom-nav-btn" onclick="goToInstructions()"></button>
+            </div>
+        </div>
+    </div>
+    <div id="sampleDIV">whatever</div>
+
+    <div class="button-active"></div>
+    <div class="media-overlay" style="display:block; font-family: exo; overflow-y: auto; background-image: url(https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/contentbg.png);
+    background-size: cover;">
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Sidebar -->
+                <button class="mobileSidebar">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="overLay"></div>
+                <div class="sidebar">
+                    <div class="sidebar-footer">
+                        <button type="button" class="btn btn-link text-left w-100 " id="sidebar-footer-text" onclick="HideMediaGallery()">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;&nbsp;BACK TO VIRTUAL TOUR
+                        </button>
+                    </div>
+
+                    <div class="sidebar-header">
+                        CURRENT AREA
+                        <div id="area-name">
+                            Meeting Room
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-sidebar">
+                    
+                    </ul>
+                </div>
+
+
+                <!-- Main Content -->
+                <div class="col-sm-12 main vh-100 vw-100" id="main-content" style="background-color:white;">
+                    <div class="row">
+                        <h1 class="page-header" id="media-type">
+
+                        </h1>
+                        <h1 class="page-header text-left" id="media-title">
+
+                        </h1>
+                    </div>
+                    <div class="row mt-n2 ml-n4 pb-3">
+                        <img src="images/ui/title%20line.png" style="height:25px;">
+                    </div>
+                    <div class="row">
+                        <div id="image-container" style="display:block; width: 100%">
+                            <img id="media-image" src="images/backgrounds/conference%20room_00000.jpg" style="width: 100%; max-width: 100%;">
+                        </div>
+
+
+                        <video id="target-video" class="video-js vjs-big-play-centered" style="display:block; margin-bottom: 30px" controls preload="auto" width="100%" height="100%" data-setup='{
+                                        "aspectRatio":"16:9", "fluid": true
+                                        }'>
+                            <source src="media/gallery/videos/small.mp4" type="video/mp4" />
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a
+                                web browser that
+                                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+
+
+                        <div class="vh-100 vw-100" id="iframe-container" style="display:none;">
+                            <iframe id="embedded-iframe" style="border: 0px solid white; margin: 0px; width:100%;" src=""></iframe>
+                        </div>
+
+                        <div id="pptx-container" style="display:none; width: 100%; text-align: -webkit-center">
+                        </div>
+
+                        <div id="pdf-container">
+                            <div id="pdf-contents">
+                                <button id="pdf-prev" style="background: transparent; border: none; outline: none;"><img class="page-btn" src="images/ui/previous.png" /></button>
+                                <div id="pdf-show">
+                                    <canvas id="pdf-canvas"></canvas>
+                                    <div class="pdf-page-num" style="margin: 10px; height: 1.5rem;">
+                                        <span id="page-count-container">Page 
+                                            <span id="pdf-current-page"></span> of 
+                                            <span id="pdf-total-pages"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button id="pdf-next" style="background: transparent; border: none; outline: none;"><img class="page-btn" src="images/ui/next.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Description Box -->
+    <div id="movingbox" style="position:absolute; display:block">
+        <p id="text-description">test</p>
+    </div>
+
+
+    <div style="display:none;" id="video2">
+        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <source src="media/gallery/videos/small.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Partners Container -->
+    <div class="partners-overlay please-scroll" id='partners-container'>
+
+        <div class="container-fluid mt-5 pt-5 partners-background" id="partners-background">
+            <div class="jumbotron py-4 m-2" id="partner-jumbotron">
+                <div class="p-4" style="background-color:rgba(255, 255, 255, 0.95); box-shadow: 0px 0px 5px red; border-radius: 4px">
+                    <div class="row mt-2 mb-n2 mx-auto" id="partner-top-tab">
+                        <button id="partner-close-btn" class="btn pull-left" style="display:none" type="button" onclick="ClosePartnerDescription()">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        </button>
+                        <div id="partner-close-bar"></div>
+
+                        <!-- Portfolio Item Heading -->
+                        <h1 class="ml-3 my-auto" id="partners-title">OUR PARTNERS</h1>
+
+                    </div>
+
+                    <div id="partners-content">
+                        <!-- Portfolio Item Row -->
+                        <div class="row collapse mx-2" id="partner">
+
+                            <div class="row" id="partner-logo">
+                                <div class="col-md-8 mb-n4 ml-5">
+                                    <img id="partner-image" class="img-fluid" src="images/ui/logos/spotify.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="row w-100 partner-content">
+                                <div class="col">
+                                    <p id="partner-description" class="text-left my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+                                </div>
+                            </div>
+                            <div class="row w-100 mt-4 mx-4" style="display: none">
+                                <div class="col-md-8">
+
+                                    <div class="input-group mb-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1" style="background-color: rgba(255, 255, 255, 0.15);  border: 0px solid white;">
+                                                <i class="fa fa-link" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+
+                                        <input id="partner-link" type="text" class="form-control" value="Username" aria-label="Username" aria-describedby="basic-addon1" readonly="readonly" style="background-color: rgba(255, 255, 255, 0.15);  border: 0px solid white;">
+
+                                        <div class="input-group-append">
+                                            <button class="clipboard-btn pull-right btn-primary rounded-right px-3" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">Copy
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.row -->
+                        <div class="row collapse.in" id="partners-logos">
+                            <div id="partners-logos-container" style="overflow-y: auto; overflow-x: hidden">
+                                <div class="row">
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('2DFIRE');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/2dfire_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('AELF');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/aelf_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('AISHU');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/aishu_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('AITECH');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/aitech_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('ASIALINK');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/asialink_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('AXXONSOFT');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/axxonsoft_logo.png" alt="">
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('BCB');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/bcb_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('CLICK2CLOUD');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/click2cloud_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('DIGI');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/digi_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('DIGITWIN');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/digitwin_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('GANWEISOFTWARE');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/ganwei_software_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('HALTDOS');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/haltdos_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('HIVERLAB');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/hiverlab_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('INTERCORP');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/intercorp_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('MINIVISION');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/minivision_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('MIROBOTIC');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/mirobotic_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('MTS');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/mts_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('MYDOC');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/mydoc_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('NYP');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/nyp_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('NCS');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/ncs_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('NEOLIX');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/neolix_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('ORANGE');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/orange_logo.png" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('OTSAW');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/otsaw_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('SCANMAX');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/scanmax_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('SP');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/sp_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('SUSS');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/suss_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('STENGINEERING');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/stengineering_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('TP');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/tp_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('TUSHENG');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/tusheng_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('VIATICK');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/viatick_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('WALLYT');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/wallyt_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-9 partners-logo">
+                                        <button class="partner-btn h-100" onclick="OnPartnerSelect('XINGHAI');">
+                                            <img class="img-fluid p-4" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/logos/xinghai_logo.png" alt="">
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Projects Row -->
+
+                        <div id="partners-logos" class="row collapse">
+                        </div>
+                        <!-- /.row -->
+                    </div>
+
+
+                </div>
+                <button id="partner-exit-btn" class="btn mt-5 mx-auto" type="button" onclick="HidePartnersContainer(); ClosePartnerDescription();">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Partners Container -->
+
+
+    <!-- Feedback Container -->
+    <div class="feedback-overlay" id='feedback-container'>
+
+        <div class="container my-5" id="feedback-background" >
+            <div class="jumbotron py-4 m-2" id="feedback-jumbotron">
+                <div class="p-4" style="background-color:rgba(255, 255, 255, 0.95); border-radius: 0px;">
+
+                    <div class="row mt-2 mb-n2 mx-auto">
+                        <div class="feedback-exit-btn">
+                            <button id="feedback-exit-btn" class="btn" type="button" onclick="HideFeedbackContainer()">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        
+
+                        <!-- Portfolio Item Heading -->
+                        <h1 class="ml-3 my-auto" id="feedback-title">SEND US SOME FEEDBACK OR QUESTIONS!</h1>
+
+                        <div class="my-4 mx-5 px-2 w-100" id="feedback-content">
+                            <p class="h5 text-left mb-4">
+                                Do you have an inquiry or a suggestion? Let us know in the field below.
+                            </p>
+                            <img id="qr" src="images/ui/qr.jpg" style="width: 100%;">
+                            <form id="feedback-form" class="mt-2 form" onsubmit="event.preventDefault(); SubmitFeedback();">
+                                <div class="form-group w-100">
+                                    <label class="text-left w-100" id="feedback-message" for="exampleFormControlSelect1"><b>Message</b></label>
+                                    <textarea class="form-control p-3 mb-4" required id="feedbackField" rows="3" placeholder="Type here..."></textarea>
+                                      <input class="feedback-btn px-3 mt-2" type="submit" value="SEND FEEDBACK">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feedback Container -->
+
+    <!-- Image Container -->
+    <div class="overlay" id='image-container' style='display:none'>
+        <div class="overlay-container">
+            <div id="video-title">
+                <p id="image-description">This is a image title </p>
+            </div>
+
+            <img id='target-image' src='images/backgrounds/conference%20room_00000.jpg' width="100%">
+
+            <div id="close-button">
+                <button class="btn" onclick="HideImageContainer()"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Model Container -->
+    <div id="model-container" class="overlay" style='display:none'>
+        <div class="overlay-container">
+            <div id="model-title">
+                <p id="model-description">This is a model title </p>
+            </div>
+
+            <div id="model-parent"></div>
+
+            <div id="close-button">
+                <button class="btn" onclick="HideModelContainer()"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration -->
+    <div id="introduction" class="introduction box-visible">
+        <video poster="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/loginbg.png" id="fullscreen-video" playsinline autoplay muted loop>
+            <!-- 
+- Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+            <source src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/videos/bg.mp4" type="video/mp4">
+
+        </video>
+        <div>
+            <img class="huawei-logo" src="images/ui/huawei.png">
+        </div>
+        <div>
+            <a href="https://www.hiverlab.com/" target="_blank">
+                <img class="powered-by-logo" src="images/ui/poweredbyblack.png"></a>
+        </div>
+        <div class="container vertical-center">
+            
+            <div class="card mx-auto text-center border-0">
+                
+                <img class="card-img-top" src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/bg%20card.png" alt="Card image" style="opacity: 0.75;">
+
+                <div class="card-img-overlay m-5 p-4">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img class="img-responsive" src="images/ui/ailab.png">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <p class="text-left h5"><b>Welcome to the AI•Lab Virtual Tour</b></p>
+                        </div>
+                    </div>
+                    <form class="form" onsubmit="event.preventDefault(); checkFormAndRedirect()" id="email-form">
+                        <div class="row my-1">
+
+
+                            <div class="col">
+                                <!--
+                                <label class="pull-left" for="email">Enter email:</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="example@email.com" required>
+-->
+                                <div class="text-left my-2"><b>Enter email:</b></div>
+                                <div class="input-group login-field" style="background-color: rgba(255, 255, 255, 1);">
+
+                                    <input id="email" type="text" class="form-control h-100" aria-label="Username" placeholder="example@email.com" required aria-describedby="emailHelp">
+
+                                    <div class="input-group-append">
+                                        <button type="submit" class="enter-btn" value="ENTER">
+                                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4 mx-1">
+                            <div class="col text-left">
+                                <input class="form-check-input" required type="checkbox" value="" id="terms">
+                                <label class="form-check-label h6" for="terms">
+                                    I understand and agree to the use and transfer of my personal information by Huawei according to Huawei's <a href="https://www.huawei.com/en/privacy-policy" target="_blank">Privacy Policy</a> and <a href="https://www.huawei.com/en/legal" target="_blank">Terms of Use.</a>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Instructions -->
+    <div id="instructions" class="instructions box-hidden">
+        <div class="container pt-5 mt-5" id="instructions-container">
+            <button class="btn" id="logout-btn" onclick="goToRegistration();"><i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;&nbsp;LOG OUT</button>
+
+            <div class="row h-100 mb-5 pb-5">
+                <div class="col-sm-4 mr-n5">
+                    <div class="row">
+                        <div class="card mx-auto text-center m-4 p-4 border-0 rounded-0" id="instruction-tag">
+                            <div class="my-2 mx-4 text-left">
+
+                                <div id="login-close-bar"></div>
+                                <p class="pull-left h5"><b>INSTRUCTIONS</b></p>
+                                <p class="pull-left my-4">Experience what AI•Lab offers in this 360 interactive platform.</p>
+                                <p class="pull-left">
+                                    <b>Click and drag</b> to look around the room
+                                </p>
+                                <p class="pull-left mt-n3">
+                                    <b>Click on interactive points</b> to show additional content
+                                </p>
+                                <p class="pull-left mt-n3">
+                                    <b>Click on navigational arrows</b> to move to adjacent rooms
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card mx-auto text-center m-4 border-0 rounded-0" id="theme-tag">
+
+                            <div class="my-4 mx-5 text-left">
+                                <div id="login-close-bar"></div>
+                                <div class="row mx-0">
+                                    <p class="pull-left h5"><b>CHOOSE A THEME</b></p>
+                                </div>
+                                <div class="row mt-3 mb-3">
+                                    <div class="col">
+                                        <button id="5g-button" onclick="LoadProject('5G');" type="submit" class="tech-btn tech-btn-disabled" value="ENTER">5G +</button>
+                                    </div>
+                                    <div class="col">
+                                        <button id="cloud-button" onclick="LoadProject('CLOUD');" type="submit" class="tech-btn tech-btn-disabled" value="ENTER">GO CLOUD</button>
+                                    </div>
+                                    <div class="col">
+                                        <button id="ai-button" onclick="LoadProject('AI');" type="submit" class="tech-btn tech-btn-disabled" value="ENTER">AI COMPUTING</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-center">
+                            <button id="enter-tour-button" onclick="goToTour();" type="submit" class="tech-btn" value="ENTER">ENTER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div id="minimap-model-card-registration" class="card text-center border-0" style="width:100%; height:100%; background-color:rgba(0, 0, 0, 0.0)">
+                        <iframe id="embedded-iframe-menu" style="border: 0px solid white; height:100%; width: 100%; padding: 0px; margin: 0px;" src="3dmodels/3d%20Map.html"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Minimap Container -->
+    <div class="feedback-overlay" id='minimap-container' style='display:block;'>
+        <iframe id="embedded-iframe-minimap" style="border: 0px solid white; width:60%; height: 65%" src="3dmodels/3d%20Map.html" class="my-4"></iframe>
+
+        <button id="partner-exit-btn" class="btn mx-auto" style="display:block" type="button" onclick="HideIFrameContainer()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+    </div>
+    <!-- Minimap Container -->
+    
+    <!-- Mobile Minimap Container -->
+    <div class="feedback-overlay" id='mobile-minimap-container' style='display:block;'>
+		<div class="mobile-minmap-out">
+            <div class="container-table100" id="mobile-minmap-table-out">
+			<div class="wrap-table100">
+				<div class="minmap-table">
+                    <div class="minmap-row">
+						<div class="cell" id="mobile-min-text1" value="7">
+							Virtual Academy	
+						</div>
+					</div>
+
+					<div class="minmap-row">
+						<div class="cell" id="mobile-min-text2" value="8">
+							Online Developer Zone
+						</div>
+					</div>
+
+					<div class="minmap-row">
+						<div class="cell" id="mobile-min-text3" value="6">
+							EI Healthcare + Education
+						</div>
+					</div>
+
+					<div class="minmap-row">
+						<div class="cell" id="mobile-min-text4" value="5">
+							Smart City
+						</div>
+					</div>
+
+					<div class="minmap-row">
+						<div class="cell" id="mobile-min-text5" value="4">
+							Grow With Intelligence
+						</div>
+					</div>
+
+					<div class="minmap-row">
+						<div class="cell" id="mobile-min-text6" value="2">
+							Environment Development
+						</div>
+					</div>
+
+					<div class="minmap-row">
+						<div class="cell" id="mobile-min-text7" value="3">
+							Logistics + Retail
+						</div>
+					</div>         
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Mobile Minimap Container -->
+
+    <!-- Scanner Container -->
+    <div class="scanner-overlay" id='scanner-container' style='display:block;'>
+        <iframe id="embedded-iframe-scanner" style="border: 0px solid white; width:100%; height: 100%; padding: 0px; margin: 0px;" src="3dmodels/weighing%20Machine.html"></iframe>
+
+        <div id="scanner-footer">
+            <button type="button" class="btn btn-link text-left w-100" id="sidebar-footer-text" onclick="HideScannerContainer()">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;&nbsp;BACK TO VIRTUAL TOUR
+            </button>
+        </div>
+    </div>
+    <!-- Scanner Container -->
+
+
+
+    <div id="overlayName">
+
+        Main Hall
+
+    </div>
+</body>
+
+<script src="libraries/videojs/video.js"></script>
+
+
+<!-- Three.js -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.116.1/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.116.1/examples/js/loaders/GLTFLoader.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/three@0.116.1/examples/jsm/controls/OrbitControls.js"></script>
+
+
+<!-- Bootstrap -->
+<script src="libraries/jquery/jquery-3.5.1.min.js"></script>
+<script src="libraries/bootstrap/popper.min.js"></script>
+<script src="libraries/bootstrap/bootstrap.min.js"></script>
+
+<!-- Clipboard -->
+<script src="libraries/clipboard/clipboard.min.js"></script>
+
+
+<script src="js/AppController.js"></script>
+<script src="js/MediaGallery.js"></script>
+<script src="js/LoginController.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
+<script type="module" src="3dmodels/min-main.js"></script>
+<!-- 3D Model 
+<script src="3dmodels/js/jquery-3.5.1.min.js"></script>
+<script type="module" src="3dmodels/main.js"></script>
+    --></html>

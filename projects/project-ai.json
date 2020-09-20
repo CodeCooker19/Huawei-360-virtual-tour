@@ -1,0 +1,1129 @@
+{
+   "id":"Project 1",
+   "scenes":[
+      {
+         "id":"Exit",
+          "display-name":"Exit",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/optimized/area%20A.jpg",
+         "rotation":"0 260 0",
+         "interactives":[
+            {
+               "id": "Enter",
+               "type":"Navigation",
+               "position":"3 0 -0.5",
+               "rotation":"90 0 270",
+               "scale":"1 1 1",
+               "content-url":"Zone B"
+            },
+            {
+               "id":"Welcome Screen AI",
+               "type":"Welcome",
+               "position":"-0.186 1.84 -2.4",
+               "rotation":"0 0 0",
+               "scale":"1 1 1",
+               "content-url":"./images/ui/card_registration.png"
+            }
+         ],
+         "media":[
+         ]
+      },
+      {
+         "id":"Zone B",
+          "display-name":"Partners",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/optimized/area%20B_side%20shot.jpg",
+         "rotation":"0 268 0",
+         "interactives":[
+            {
+               "id":"To AI Introduction",
+               "type":"Navigation",
+               "position":"-5 -0 0",
+               "rotation":"90 0 100",
+               "scale":"1 1 1",
+               "content-url":"Zone 1"
+            },
+            {
+               "id":"To Intelligent Metropolis",
+               "type":"Navigation",
+               "position":"-6 0 5",
+               "rotation":"90 0 50",
+               "scale":"1 1 1",
+               "content-url":"Zone 2"
+            },
+            {
+               "id":"To Economy Transformation",
+               "type":"Navigation",
+               "position":"-0.5 0 2",
+               "rotation":"90 0 -30",
+               "scale":"1 1 1",
+               "content-url":"Zone 3"
+            },
+            {
+               "id":"To Co-Partner Solutions",
+               "type":"Navigation",
+               "position":"-0.5 0 8",
+               "rotation":"90 0 -30",
+               "scale":"1 1 1",
+               "content-url":"Zone 4"
+            },
+            {
+               "id":"Exit",
+               "type":"Navigation",
+               "position":"3 1.2 -1.0",
+               "rotation":"0 270 0",
+               "scale":"0.75 0.75 0.75",
+               "content-url":"Exit"
+            },
+            {
+               "id":"Our Partners",
+               "type":"Link",
+               "position":"1 1.15 -2",
+               "rotation":"0 1 0",
+               "scale":"4.5 11 1",
+               "content-url":"https://www.spotify.com/sg-en/",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/ui/logowall.png"
+            },
+            {
+               "id":"HUAWEI AI Overview",
+               "type":"Video",
+               "position":"-10.2 1.65 -1.9",
+               "rotation":"0 4 -1",
+               "scale":"0.65 0.65 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV1-HUAWEI%20AI%20Overview%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"2020 APAC AI Webinar",
+               "type":"Video",
+               "position":"-7.9 1.6 -1.95",
+               "rotation":"0 4 -1",
+               "scale":"0.65 0.65 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV2-2020%20APAC%20AI%20Webinar%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"ISV Partner Development Portal",
+               "type":"Video",
+               "position":"-5.7 1.55 -2",
+               "rotation":"0 4 -1",
+               "scale":"0.65 0.65 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV3-ISV%20Partner%20Development%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Smart City",
+               "type":"Video",
+               "position":"-7.2 1.7 6",
+               "rotation":"0 -50 0",
+               "scale":"0.5 0.475 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV1-Smart%20City%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Smart Traffic",
+               "type":"Video",
+               "position":"-8.5 1.7 5",
+               "rotation":"0 -80 0",
+               "scale":"0.5 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV2_Smart%20Traffic%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Smart Healthcare",
+               "type":"Video",
+               "position":"-6 1.7 7",
+               "rotation":"0 -7 0",
+               "scale":"0.5 0.475 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV3-Smart%20Healthcare%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Atlas 900",
+               "type":"Video",
+               "position":"0.1 1.8 10",
+               "rotation":"0 0 -2",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/CLOUD/Zone%206-Intelligent%20Computing%20Product/Zone6-TV1_Atlas%20900%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Energy Industry",
+               "type":"Video",
+               "position":"0.75 1.76 1.46",
+               "rotation":"0 273 1",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV1_Energy%20Industry%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Agile Manufacturing",
+               "type":"Video",
+               "position":"0.84 1.79 3.10",
+               "rotation":"0 273 1",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV2%20_Agile%20Manufacturing%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Digitizing Finance",
+               "type":"Video",
+               "position":"0.93 1.82 4.73",
+               "rotation":"0 273 1",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV3_Digitizing%20Finance%20-%20Cover%20Page.png",
+                "active": false
+            }
+         ],
+         "media":[
+            {
+               "id":"When Huawei Cloud AI Meets Enterprises",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/When%20Huawei%20Cloud%2BAI%20Meets%20Enterprises.mp4"
+            }
+         ]
+      },
+      {
+         "id":"Zone 1",
+          "display-name":"AI Introduction",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/optimized/area%201%20front%20far%20shot.jpg",
+         "rotation":"0 4 0",
+         "interactives":[
+            {
+               "id":"To Partners",
+               "type":"Navigation",
+               "position":"4 0 -2",
+               "rotation":"90 0 260",
+               "scale":"1 1 1",
+               "content-url":"Zone B"
+            },
+            {
+               "id":"To Intelligent Metropolis",
+               "type":"Navigation",
+               "position":"-0.5 -0 3.5",
+               "rotation":"90 0 40",
+               "scale":"1 1 1",
+               "content-url":"Zone 2"
+            },
+            {
+               "id":"To Economy Transformation",
+               "type":"Navigation",
+               "position":"4 -0 1.8",
+               "rotation":"90 0 -80",
+               "scale":"1 1 1",
+               "content-url":"Zone 3"
+            },
+            {
+               "id":"To Co-Partner Solutions",
+               "type":"Navigation",
+               "position":"4 -0 5",
+               "rotation":"90 0 -50",
+               "scale":"1 1 1",
+               "content-url":"Zone 4"
+            },
+            {
+               "id":"AI Introduction",
+               "type":"Image",
+               "position":"0.0 2.3 -3",
+               "rotation":"0 0 0",
+               "scale":"0.75 0.17 0.25",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/banners/AI_Introduction.png",
+                "active": false
+            },
+            {
+               "id":"HUAWEI AI Overview",
+               "type":"Video",
+               "position":"-1.475 1.465 -3",
+               "rotation":"0 0 0",
+               "scale":"0.5 0.45 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV1-HUAWEI%20AI%20Overview%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"2020 APAC AI Webinar",
+               "type":"Video",
+               "position":"0.025 1.465 -3",
+               "rotation":"0 0 0",
+               "scale":"0.5 0.45 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV2-2020%20APAC%20AI%20Webinar%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"ISV Partner Development",
+               "type":"Video",
+               "position":"1.525 1.465 -3",
+               "rotation":"0 0 0",
+               "scale":"0.5 0.45 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV3-ISV%20Partner%20Development%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"Smart Healthcare",
+               "type":"Video",
+               "position":"-1.22 1.45 6.2",
+               "rotation":"0 170 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV3-Smart%20Healthcare%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Smart City",
+               "type":"Video",
+               "position":"-3 1.45 5.5",
+               "rotation":"0 140 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV1-Smart%20City%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Smart Traffic",
+               "type":"Video",
+               "position":"-3.6 1.45 3.6",
+               "rotation":"0 90 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV2_Smart%20Traffic%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Energy Industry",
+               "type":"Video",
+               "position":"7 1.735 -0.02",
+               "rotation":"0 270 0",
+               "scale":"0.56 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV1_Energy%20Industry%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Agile Manufacturing",
+               "type":"Video",
+               "position":"7 1.735 1.7",
+               "rotation":"0 270 0",
+               "scale":"0.56 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV2%20_Agile%20Manufacturing%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Digitizing Finance",
+               "type":"Video",
+               "position":"7 1.735 3.4",
+               "rotation":"0 270 0",
+               "scale":"0.56 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV3_Digitizing%20Finance%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Partner Hexa Food: Quality Assurance",
+               "type":"Video",
+               "position":"9.4 1.735 8.1",
+               "rotation":"0 270 0",
+               "scale":"0.56 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%204-Co-Partner%20Solutions/Zone4-TV1_HEXA%20FOOD%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Atlas 900",
+               "type":"Video",
+               "position":"6.15 1.735 9.2",
+               "rotation":"0 180 0",
+               "scale":"0.5 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/CLOUD/Zone%206-Intelligent%20Computing%20Product/Zone6-TV1_Atlas%20900%20-%20Cover%20Page.png",
+                "active": false
+            }
+         ],
+         "media":[
+            {
+               "id":"HUAWEI AI Overview",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV1-HUAWEI%20AI%20Overview.mp4"
+            },
+            {
+               "id":"2020 APAC AI Webinar",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV2-2020%20APAC%20AI%20Webinar.mp4"
+            },
+            {
+               "id":"ISV Partner Development",
+               "type":"Image",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV3-ISV%20Partner%20Development.JPG"
+            }
+         ]
+      },
+      {
+         "id":"Zone 2",
+          "display-name":"Intelligent Metropolis",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/optimized/area%202%20front%20far%20shot.jpg",
+         "rotation":"0 -90 0",
+         "interactives":[
+            {
+               "id":"To AI Introduction",
+               "type":"Navigation",
+               "position":"2.5 0 2.5",
+               "rotation":"90 0 -40",
+               "scale":"1 1 1",
+               "content-url":"Zone 1"
+            },
+            {
+               "id":"To Economy Transformation",
+               "type":"Navigation",
+               "position":"-2 0 3.5",
+               "rotation":"90 0 40",
+               "scale":"1 1 1",
+               "content-url":"Zone 3"
+            },
+            {
+               "id":"To Co-Partner Solutions",
+               "type":"Navigation",
+               "position":"-5 0 1.5",
+               "rotation":"90 0 70",
+               "scale":"1 1 1",
+               "content-url":"Zone 4"
+            },
+            {
+               "id":"Intelligent Metropolis",
+               "type":"Image",
+               "position":"0.1 2.26 -3",
+               "rotation":"0 0 0",
+               "scale":"0.65 0.075 0.25",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/banners/Intelligent_Metropolis.png",
+                "active": false
+            },
+            {
+               "id":"Smart Healthcare",
+               "type":"Video",
+               "position":"-1.75 1.49 -2.5",
+               "rotation":"0 30 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV3-Smart%20Healthcare%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"Smart City",
+               "type":"Video",
+               "position":"0.075 1.5 -3",
+               "rotation":"0 0 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV1-Smart%20City%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"Smart Traffic",
+               "type":"Video",
+               "position":"1.7 1.47 -2.25",
+               "rotation":"0 -45 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV2_Smart%20Traffic%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"HUAWEI AI Overview",
+               "type":"Video",
+               "position":"5.7 1.4 4",
+               "rotation":"0 225 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV1-HUAWEI%20AI%20Overview%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"2020 APAC AI Webinar",
+               "type":"Video",
+               "position":"4.3 1.4 5",
+               "rotation":"0 225 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV2-2020%20APAC%20AI%20Webinar%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"ISV Partner Development",
+               "type":"Video",
+                "position":"3 1.4 6",
+               "rotation":"0 225 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV3-ISV%20Partner%20Development%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Energy Industry",
+               "type":"Video",
+               "position":"-2.825 1.7 8",
+               "rotation":"0 -45 0",
+               "scale":"0.575 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV1_Energy%20Industry%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Agile Manufacturing",
+               "type":"Video",
+               "position":"-4.06 1.7 6.8",
+               "rotation":"0 -45 0",
+               "scale":"0.58 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV2%20_Agile%20Manufacturing%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Digitizing Finance",
+               "type":"Video",
+               "position":"-5.32 1.7 5.6",
+               "rotation":"0 -45 0",
+               "scale":"0.58 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV3_Digitizing%20Finance%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Partner SKA: Scientific Research",
+               "type":"Video",
+               "position":"-10.6 1.7 4",
+               "rotation":"0 -50 0",
+               "scale":"0.575 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%204-Co-Partner%20Solutions/Zone4-TV2_Partner%20SKA%20Scientific%20Research%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Partner Hexa Food: Quality Assurance",
+               "type":"Video",
+               "position":"-9.8 1.7 5.5",
+               "rotation":"0 -50 0",
+               "scale":"0.575 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%204-Co-Partner%20Solutions/Zone4-TV1_HEXA%20FOOD%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Atlas 900",
+               "type":"Video",
+               "position":"-8 1.75 0.9",
+               "rotation":"0 -140 0",
+               "scale":"0.5 0.45 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/CLOUD/Zone%206-Intelligent%20Computing%20Product/Zone6-TV1_Atlas%20900%20-%20Cover%20Page.png",
+                "active": false
+            }
+         ],
+         "media":[
+            {
+               "id":"Smart Healthcare",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV3-Smart%20Healthcare.mp4"
+            },
+            {
+               "id":"Smart City",
+               "type":"Image",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV1-Smart%20City.jpg"
+            },
+            {
+               "id":"Smart Traffic",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV2_Smart%20Traffic.mp4"
+            }
+         ]
+      },
+      {
+         "id":"Zone 3",
+          "display-name":"Economy Transformation",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/optimized/area%203%20front.jpg",
+         "rotation":"0 -90 0",
+         "interactives":[
+            {
+               "id":"To Intelligent Metropolis",
+               "type":"Navigation",
+               "position":"2 0 4",
+               "rotation":"90 0 -40",
+               "scale":"1 1 1",
+               "content-url":"Zone 2"
+            },
+            {
+               "id":"To AI Introduction",
+               "type":"Navigation",
+               "position":"-2 0 4",
+               "rotation":"90 0 90",
+               "scale":"1 1 1",
+               "content-url":"Zone 1"
+            },
+            {
+               "id":"To Co-Partner Solutions",
+               "type":"Navigation",
+               "position":"4.5 0 -0.5",
+               "rotation":"90 0 200",
+               "scale":"1 1 1",
+               "content-url":"Zone 4"
+            },
+            {
+               "id":"To Partners",
+               "type":"Navigation",
+               "position":"-3 0 -0.5",
+               "rotation":"90 0 120",
+               "scale":"1 1 1",
+               "content-url":"Zone B"
+            },
+            {
+               "id":"Economy Transformation",
+               "type":"Image",
+               "position":"-0.03 2.575 -2.5",
+               "rotation":"0 0 -0.5",
+               "scale":"0.85 0.12 0.25",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/banners/Economy_Transformation.png",
+                "active": false
+            },
+            {
+               "id":"Energy Industry",
+               "type":"Video",
+               "position":"-1.775 1.725 -2.2",
+               "rotation":"0 0 0",
+               "scale":"0.575 0.525 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV1_Energy%20Industry%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"Agile Manufacturing",
+               "type":"Video",
+               "position":"-0.05 1.725 -2.2",
+               "rotation":"0 0 0",
+               "scale":"0.575 0.525 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV2%20_Agile%20Manufacturing%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"Digitizing Finance",
+               "type":"Video",
+               "position":"1.675 1.725 -2.2",
+               "rotation":"0 0 0",
+               "scale":"0.575 0.525 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV3_Digitizing%20Finance%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"HUAWEI AI Overview",
+               "type":"Video",
+               "position":"-4.75 1.45 6.5",
+               "rotation":"0 90 0",
+               "scale":"0.575 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV1-HUAWEI%20AI%20Overview%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"2020 APAC AI Webinar",
+               "type":"Video",
+               "position":"-4.75 1.45 4.78",
+               "rotation":"0 90 0",
+               "scale":"0.575 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV2-2020%20APAC%20AI%20Webinar%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"ISV Partner Development Portal",
+               "type":"Video",
+               "position":"-4.75 1.45 3.06",
+               "rotation":"0 90 0",
+               "scale":"0.575 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV3-ISV%20Partner%20Development%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Atlas 900",
+               "type":"Video",
+               "position":"8 1.725 -1.55",
+               "rotation":"0 270 0",
+               "scale":"0.575 0.525 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/CLOUD/Zone%206-Intelligent%20Computing%20Product/Zone6-TV1_Atlas%20900%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Smart City",
+               "type":"Video",
+               "position":"2.15 1.475 7.5",
+               "rotation":"0 180 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV1-Smart%20City%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Smart Traffic",
+               "type":"Video",
+               "position":"3.7 1.475 6.8",
+               "rotation":"0 220 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV2_Smart%20Traffic%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Smart Healthcare",
+               "type":"Video",
+               "position":"4.4 1.475 5",
+               "rotation":"0 260 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%202-Intelligent%20Metropolis/Zone2-TV3-Smart%20Healthcare%20-%20Cover%20Page.png",
+                "active": false
+            }
+         ],
+         "media":[
+            {
+               "id":"Energy Industry",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV1_Energy%20Industry.mp4"
+            },
+            {
+               "id":"Agile Manufacturing",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV2%20_Agile%20Manufacturing.mp4"
+            },
+            {
+               "id":"Digitizing Finance",
+               "type":"Image",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV3_Digitizing%20Finance.jpg"
+            }
+         ]
+      },
+      {
+         "id":"Zone 4",
+          "display-name":"Co-Partner Solutions",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/optimized/area%204_6%20front%20far%20shot.jpg",
+         "rotation":"0 -88 0",
+         "interactives":[
+            {
+               "id":"To AI Introduction",
+               "type":"Navigation",
+               "position":"-5 0 6",
+               "rotation":"90 0 50",
+               "scale":"1 1 1",
+               "content-url":"Zone 1"
+            },
+            {
+               "id":"To Intelligent Metropolis",
+               "type":"Navigation",
+               "position":"-1 0 6",
+               "rotation":"90 0 -30",
+               "scale":"1 1 1",
+               "content-url":"Zone 2"
+            },
+            {
+               "id":"To Economy Transformation",
+               "type":"Navigation",
+               "position":"-2 0 1.5",
+               "rotation":"90 0 90",
+               "scale":"1 1 1",
+               "content-url":"Zone 3"
+            },
+            {
+               "id":"To Institute of Higher Learning",
+               "type":"Navigation",
+               "position":"2 0 2.5",
+               "rotation":"90 0 -90",
+               "scale":"1 1 1",
+               "content-url":"Zone 5"
+            },
+            {
+               "id":"Co-Partner Solutions",
+               "type":"Image",
+               "position":"0.09 2.41 -3.25",
+               "rotation":"0 5 0",
+               "scale":"0.75 0.12 0.25",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/banners/Co-Partner_Solutions.png",
+                "active": false
+            },
+            {
+               "id":"Partner SKA: Scientific Research",
+               "type":"Video",
+               "position":"-1.49 1.95 -6.25",
+               "rotation":"0 5 0",
+               "scale":"1.1 1 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%204-Co-Partner%20Solutions/Zone4-TV2_Partner%20SKA%20Scientific%20Research%20-%20Cover%20Page.png",
+                "category": "Co-Partner Solutions"
+            },
+            {
+               "id":"Partner Hexa Food: Quality Assurance",
+               "type":"Video",
+               "position":"1.9 1.95 -6.5",
+               "rotation":"0 5 0",
+               "scale":"1.1 1 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%204-Co-Partner%20Solutions/Zone4-TV1_HEXA%20FOOD%20-%20Cover%20Page.png",
+                "category": "Co-Partner Solutions"
+            },
+            {
+               "id":"Partner DIGI: AI Scale Device",
+               "type":"Embedded",
+               "position":"-2.85 1.25 -3.05",
+               "rotation":"0 45 0",
+               "scale":"0.35 0.35 0.35",
+               "value":"Model",
+               "content-url":"3dmodels/weighing%20Machine.html",
+                "category": "Co-Partner Solutions"
+            },
+            {
+               "id":"Intelligent Computing Product",
+               "type":"Image",
+               "position":"2.7 2.53 0.08",
+               "rotation":"0 270 -1",
+               "scale":"0.78 0.08 0.25",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/banners/Intelligent_Computing_Product.png",
+                "active": false
+            },
+            {
+               "id":"Atlas 200",
+               "type":"Embedded",
+               "position":"3 0.75 0.1",
+               "rotation":"0 -90 0",
+               "scale":"0.35 0.35 0.35",
+               "value":"Model",
+               "content-url":"huawei-models/atlas/index.html",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Atlas 900",
+               "type":"Video",
+               "position":"4.9 1.85 0.12",
+               "rotation":"0 270 0",
+               "scale":"1.1 1 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/CLOUD/Zone%206-Intelligent%20Computing%20Product/Zone6-TV1_Atlas%20900%20-%20Cover%20Page.png",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"HUAWEI AI Overview",
+               "type":"Video",
+               "position":"-14.6 1.4 18.8",
+               "rotation":"0 90 0",
+               "scale":"1.12 0.9 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV1-HUAWEI%20AI%20Overview%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"2020 APAC AI Webinar",
+               "type":"Video",
+               "position":"-14.8 1.4 15.5",
+               "rotation":"0 90 0",
+               "scale":"1.2 0.9 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV2-2020%20APAC%20AI%20Webinar%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"ISV Partner Development Portal",
+               "type":"Video",
+               "position":"-15 1.4 12",
+               "rotation":"0 90 0",
+               "scale":"1.2 0.9 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%201-AI%20Introduction/Zone1-TV3-ISV%20Partner%20Development%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Energy Industry",
+               "type":"Video",
+               "position":"2 1.35 9",
+               "rotation":"0 270 0",
+               "scale":"0.65 0.6 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV1_Energy%20Industry%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Agile Manufacturing",
+               "type":"Video",
+               "position":"1.15 1.36 9.6",
+               "rotation":"0 240 0",
+               "scale":"0.6 0.55 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV2%20_Agile%20Manufacturing%20-%20Cover%20Page.png",
+                "active": false
+            },
+            {
+               "id":"Digitizing Finance",
+               "type":"Video",
+               "position":"-0.5 1.4 10",
+               "rotation":"0 180 0",
+               "scale":"0.55 0.5 0.5",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%203-Economy%20Transformation/Zone3-TV3_Digitizing%20Finance%20-%20Cover%20Page.png",
+                "active": false
+            }
+         ],
+         "media":[
+            {
+               "id":"Partner SKA: Scientific Research",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%204-Co-Partner%20Solutions/Zone4-TV2_Partner%20SKA%20Scientific%20Research.mp4",
+                "category": "Co-Partner Solutions"
+            },
+            {
+               "id":"Partner Hexa Food: Quality Assurance",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%204-Co-Partner%20Solutions/Zone4-TV1_HEXA%20FOOD.mp4",
+                "category": "Co-Partner Solutions"
+            },
+            {
+               "id":"Atlas 900",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%206-Intelligent%20Computing%20Product/Zone6-TV1_Atlas%20900.mp4",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Atlas 200",
+               "type":"Embedded",
+               "content-url":"huawei-models/atlas200/index.html?lang=en",
+                "folder": "Atlas",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Atlas 300",
+               "type":"Embedded",
+               "content-url":"huawei-models/atlas300/index.html?lang=en",
+                "folder": "Atlas",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Atlas 500",
+               "type":"Embedded",
+               "content-url":"huawei-models/atlas500/index.html?lang=en",
+                "folder": "Atlas",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Atlas 800",
+               "type":"Embedded",
+               "content-url":"huawei-models/atlas800/index.html?lang=en",
+                "folder": "Atlas",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan 1280",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishan1280/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan 2180",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishan2180/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan 2280",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishan2280/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan 2280-2",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishan2280/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan 2280e",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishan2280e/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan 2480",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishan2480/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan 5280",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishan5280/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan 5280-2",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishan5280-2/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan x6000",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishanx6000/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan xa320",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishanxa320/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            },
+            {
+               "id":"Taishan xs320c",
+               "type":"Embedded",
+               "content-url":"huawei-models/taishanxa320c/index.html?lang=en",
+                "folder": "Taishan",
+                "category": "Intelligent Computing Product"
+            }
+         ]
+      },
+      {
+         "id":"Zone 5",
+          "display-name":"Institute of Higher Learning",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/optimized/area%205_8.jpg",
+         "rotation":"0 -90 0",
+         "interactives":[
+            {
+               "id":"To Co-Partners Solutions",
+               "type":"Navigation",
+               "position":"-4 0 1.8",
+               "rotation":"90 0 90",
+               "scale":"1 1 1",
+               "content-url":"Zone 4"
+            },
+            {
+               "id":"To Virtual Academy & Developer Zone",
+               "type":"Navigation",
+               "position":"2 0 3",
+               "rotation":"90 0 -80",
+               "scale":"1 1 1",
+               "content-url":"Zone 10"
+            },
+            {
+               "id":"Institute for Higher Learning",
+               "type":"Image",
+               "position":"0.2 2.1 -2.5",
+               "rotation":"0 -5 0",
+               "scale":"0.6 0.08 0.25",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/ui/banners/Institute%20_of%20_Higher_Learning.png",
+                "active": false
+            },
+            {
+               "id":"NUS: Prof Huang",
+               "type":"Video",
+               "position":"0.425 1.5 -5.75",
+               "rotation":"0 -5 0",
+               "scale":"1.1 1 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%205-Institute%20of%20Higher%20Learning/Zone5-TV1_NUS%20Prof%20Huang%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"AI Competition Portal",
+               "type":"Video",
+               "position":"-3.5 1.5 -4.5",
+               "rotation":"0 30 0",
+               "scale":"1.1 1 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%205-Institute%20of%20Higher%20Learning/Zone5-TV2-AI%20Competition%20Portal%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"Republic Poly Competition at Huawei HQ",
+               "type":"Video",
+               "position":"3.9 1.5 -3.5",
+               "rotation":"0 -45 0",
+               "scale":"1.1 1 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%205-Institute%20of%20Higher%20Learning/Zone5-TV3_Republic%20Poly%20Competition%20at%20Huawei%20HQ%20-%20Cover%20Page.png"
+            }
+         ],
+         "media":[
+            {
+               "id":"NUS: Prof Huang",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%205-Institute%20of%20Higher%20Learning/Zone5-TV1_NUS%20Prof%20Huang.mp4"
+            },
+            {
+               "id":"AI Competition Portal",
+               "type":"Image",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%205-Institute%20of%20Higher%20Learning/Zone5-TV2-AI%20Competition%20Portal.jpg"
+            },
+            {
+               "id":"Republic Poly Competition at Huawei HQ",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%205-Institute%20of%20Higher%20Learning/Zone5-TV3_Republic%20Poly%20Competition%20at%20Huawei%20HQ.mp4"
+            },
+	        {
+               "id":"Local PDF",
+               "type":"Pdf",
+               "content-url":"../sample.pdf"
+            }
+         ]
+      },
+      {
+         "id":"Zone 10",
+          "display-name":"Virtual Academy",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/optimized/outside%20area%209_10.jpg",
+         "rotation":"0 -96 0",
+         "interactives":[
+            {
+               "id":"To Developer Zone",
+               "type":"Navigation",
+               "position":"0.12 1.515 -0.95",
+               "rotation":"0 -45 0",
+               "scale":"0.5 0.55 0.5",
+               "content-url":"Zone 9"
+            },
+            {
+               "id":"To Institute of Higher Learning",
+               "type":"Navigation",
+               "position":"5 0 4",
+               "rotation":"90 0 -50",
+               "scale":"1 1 1",
+               "content-url":"Zone 5"
+            },
+            {
+               "id":"Huawei Talent Online",
+               "type":"Embedded",
+               "position":"-2.39 1.565 -3",
+               "rotation":"0 40 0",
+               "scale":"0.55 0.8 0.5",
+               "content-url":"https://e.huawei.com/en/talent/#/"
+            }
+         ],
+         "media":[
+            {
+               "id":"Huawei Talent Online",
+               "type":"Embedded",
+               "content-url":"https://e.huawei.com/en/talent/#/",
+                "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/Webpages/talent.PNG"
+            },
+            {
+               "id":"Huawei Cloud Academy",
+               "type":"Embedded",
+               "content-url":"https://edu.huaweicloud.com/intl/en-us/",
+                "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/Webpages/academy.PNG"
+            }
+         ]
+      },
+      {
+         "id":"Zone 9",
+          "display-name":"Online Developer Zone",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/optimized/area%209%20front%20far%20shot.jpg",
+         "rotation":"0 0 0",
+         "interactives":[
+            {
+               "id":"To Virtual Academy",
+               "type":"Navigation",
+               "position":"-2 0 0.35",
+               "rotation":"90 0 70",
+               "scale":"1 1 1",
+               "content-url":"Zone 10"
+            },
+            {
+               "id":"Atlas 200 DK Unboxing Experience",
+               "type":"Video",
+               "position":"-3.05 1.65 -5.3",
+               "rotation":"0 2 -1",
+               "scale":"1.2 1.1 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%209-Online%20Developer%20Zone/Zone9-TV2_Atlas%20200%20DK%20Unboxing%20Experience%20-%20Cover%20Page.png"
+            },
+            {
+               "id":"EI Experience Space",
+               "type":"Video",
+               "position":"1.8 1.55 -5.6",
+               "rotation":"0 5 -1",
+               "scale":"1.2 1.1 1",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%209-Online%20Developer%20Zone/Zone9-Cover.PNG"
+            }
+         ],
+         "media":[
+            {
+               "id":"Ascend Community",
+               "type":"Embedded",
+               "content-url":"https://forum.huawei.com/enterprise/en/forum-100504.html",
+                "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/Webpages/Ascend.PNG"
+            },
+            {
+               "id":"Atlas 200 DK Unboxing Experience",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/AI/Zone%209-Online%20Developer%20Zone/Zone9-TV2_Atlas%20200%20DK%20Unboxing%20Experience.mp4"
+            },
+            {
+               "id":"EI Experience Space",
+               "type":"Embedded",
+               "content-url":"https://www.huaweicloud.com/en-us/ei/experiencespace.html",
+                "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/Webpages/ei.PNG"
+            },
+            {
+               "id":"ModelArts Experience Space",
+               "type":"Embedded",
+               "content-url":"https://wx.issmart.com.cn/web/test/lcl/minisite/ModelArts-en/index.html",
+                "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/content/Webpages/modelarts.PNG"
+            }
+         ]
+      }
+   ]
+}

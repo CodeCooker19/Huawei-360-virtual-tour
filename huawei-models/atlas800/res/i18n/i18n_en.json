@@ -1,0 +1,66 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+"header.nav8":"Back",
+"topTip8":"Back Index",
+
+    "main.title": "HuaWei Atlas 800",
+    "main.text": "Tailored toward AI developers and data researchers, Huawei Atlas 800 provides end-to-end capabilities for data labeling, model generation, model training, and model inference services. With integrated software and hardware, this appliance reduces the technical entry requirements for AI applications and enables quick development and rollout of AI services for customers.",
+
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+
+    "leftMenu1.item1": "Chassis",
+    "leftMenu1.item2": "Management",
+    "leftMenu1.item3": "Pcie",
+    "leftMenu1.item4": "IO",
+    "leftMenu1.item5": "Disk",
+    "leftMenu1.item6": "Power",
+    "leftMenu1.item7": "Fan",
+    "leftMenu1.item8": "GP608 Node",
+    "leftMenu1.item9": "G560 Node",
+    
+
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+    "gp608_node.title": "GP608 Node",
+    "g560v5.title": "G560 Node",
+    "power_node.title": "Power",
+    "manage_node.title": "Managenment Module",
+    "fan_node.title":"Fan",
+    "io_node.title":"IO",
+
+    "gp608_node": "GP608 Node",
+    "g560v5": "G560 Node",
+    "power_node": "4 hot-swappable 2,200W AC or 240V HVDC PSUs, with support for N+N redundancy",
+    "manage_node": "Managenment Module",
+    "fan_node":"6 hot-swappable fan modules, with support for N+1 redundancy",
+    "io_node":"4 x PCIe x16 LP + 2 x 10 GE LOM"
+
+}

@@ -1,0 +1,69 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+"header.nav8":"Back",
+"topTip8":"Back Index",
+
+    "main.title": "XA320C High-Density Server Node",
+    "main.text": "The XA320C is a 2-socket server node designed for Huawei X6000 High-Density Server, One XA320C supports six 2.5-inch SAS/SATA drives, two Kunpeng 920 processors, up to 16 DDR4 DIMMs. ",
+
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+
+    "leftMenu1.item2": "Air duct",
+
+    "leftMenu1.item1": "Chassis ",
+    
+   "leftMenu1.item3": "Heat sink",
+   "leftMenu1.item4": "CPU",
+   "leftMenu1.item5": "Mainboard",
+    "leftMenu1.item6": "Dimm",
+ 
+    "leftMenu1.item8": "Raid card",
+    "leftMenu1.item9": "TPM card",
+    
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+   
+    "pcie_spot": "Two PCIe slot.",
+    "dimm_spot": "16 DDR4-2933 slots",
+    "cpu_spot": "2 Kunpeng 920",
+    "mgmt_spot": "Management network port",
+    "lom_spot":"LOM ports",
+    "raid_spot":"RAID card",
+
+    "pcie_spot.title":"PCIe Expansion",
+    "dimm_spot.title":"Memory",
+    "cpu_spot.title":"Processors",
+    "mgmt_spot.title":"Management network port",
+    "lom_spot.title":"LOM ports",
+    "raid_spot.title":"RAID card",
+    "special":"KunPeng920"
+
+}

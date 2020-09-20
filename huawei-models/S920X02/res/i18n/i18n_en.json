@@ -1,0 +1,94 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+  "header.nav8":"Back",
+  "topTip8":"Back Index",
+
+    "main.title": "2480",
+    "main.text": "",
+    
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+    
+    "leftMenu1.item1": "Chassis",
+    "leftMenu1.item2": "Chassis Cover",
+    "leftMenu1.item3": "Air Duct",
+    "leftMenu1.item4": "Fan",
+    "leftMenu1.item16": "Heat Sink",
+    "leftMenu1.item6": "Mainboard",
+    "leftMenu1.item8": "DIMM",
+    "leftMenu1.item9": "FlexIO Card",
+   
+    "leftMenu1.item13": "Disk",
+    "leftMenu1.item14": "I/O module",
+    "leftMenu1.item15": "Power",
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+   
+   
+    "Riser卡插槽2": "Riser卡插槽",
+    "Mgmt管理网口": "Mgmt管理网口",
+    "iBMC芯片": "iBMC芯片",
+    "后置硬盘背板电源连接器": "后置硬盘背板电源连接器",
+    "OCP电源连接器":"OCP电源连接器",
+    "后置硬盘背板Slimline连接器":"后置硬盘背板Slimline连接器",
+    "M.2连接器": "M.2连接器。",
+    "Slimline连接器":"Slimline连接器",
+    "OCP信号连接器":"OCP信号连接器",
+    "开箱检测连接器":"开箱检测连接器",
+    "6076风扇连接器":"6076风扇连接器",
+    "6038风扇连接器":"6038风扇连接器",
+    "前置硬盘背板低速信号连接器":"前置硬盘背板低速信号连接器",
+    "BBU连接器":"BBU连接器",
+    "前置硬盘背板电源连接器1":"前置硬盘背板电源连接器",
+    "电源连接器":"电源连接器",
+    "电源背板信号连接器":"电源背板信号连接器",
+
+
+    "Riser卡插槽2.title": "Riser卡插槽",
+    "Mgmt管理网口.title": "Mgmt管理网口",
+    "iBMC芯片.title": "iBMC芯片",
+    "后置硬盘背板电源连接器.title": "后置硬盘背板电源连接器",
+    "OCP电源连接器.title":"OCP电源连接器",
+    "后置硬盘背板Slimline连接器.title":"后置硬盘背板Slimline连接器",
+    "M.2连接器.title": "M.2连接器。",
+    "Slimline连接器.title":"Slimline连接器",
+    "OCP信号连接器.title":"OCP信号连接器",
+    "开箱检测连接器.title":"开箱检测连接器",
+    "6076风扇连接器.title":"6076风扇连接器",
+    "6038风扇连接器.title":"6038风扇连接器",
+    "前置硬盘背板低速信号连接器.title":"前置硬盘背板低速信号连接器",
+    "BBU连接器.title":"BBU连接器",
+    "前置硬盘背板电源连接器1.title":"前置硬盘背板电源连接器",
+    "电源连接器.title":"电源连接器",
+    "电源背板信号连接器.title":"电源背板信号连接器"
+
+
+
+}

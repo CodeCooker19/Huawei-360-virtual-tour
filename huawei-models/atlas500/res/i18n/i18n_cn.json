@@ -1,0 +1,52 @@
+{    
+    "lang": "中文",
+    "header.nav1": "原始视图",
+    "header.nav2": "爆炸视图",
+    "header.nav3": "拆卸部件",
+    "header.nav4": "产品规格",
+    "header.nav5": "反馈",
+    "header.nav8":"返回",
+    "topTip8":"返回首页",
+    "main.title": "Atlas 500 智能小站",
+    "main.text": "业界领先集成AI处理能力的边缘产品，机顶盒大小即可实现16路高清视频处理能力，相比业界产品性能提升4倍。智能小站适用于交通、看护、无人零售、智能制造等广阔的领域",
+
+    "leftMenu1": "部件",
+    "leftMenu2": "更多资源",
+
+    "leftMenu1.item1": "外壳",
+  
+    "leftMenu1.item2": "主板",
+    "leftMenu1.item3": "M.2固态硬盘",
+  
+    "leftMenu1.item11": "隐藏未选中",
+    "leftMenu1.item12": "显示全部",
+
+    "leftMenu2.item1": "用户指南",
+    "leftMenu2.item2": "工具",
+    "leftMenu2.item3": "多媒体",
+   "leftMenu2.item4": "软件",
+	"leftMenu2.item5": "成功案例",
+    "more": "3D视频>>",
+    
+
+    "bottomTip1": "选中后，移动鼠标旋转模型",
+    "bottomTip2": "选中后，移动鼠标移动模型",
+    "bottomTip3": "选中后，移动鼠标缩放模型",
+    "bottomTip4": "显示/隐藏标签",
+    "bottomTip5": "分享二维码",
+
+    "topTip1": "恢复原始视图",
+    "topTip2": "展示爆炸视图",
+    "topTip3": "移动部件",
+    "topTip4": "展示产品规格",
+    "topTip5": "邮件反馈",
+    
+    "info": "智能边缘</br>·业界领先集成AI处理能力的边缘产品</br>·-40 ℃至70℃室外工作，无风扇散热</br>小身材大能量</br>·机顶盒大小即可实现16路高清视频处理能力</br>·相比业界产品性能提升4倍</br>边云协同</br>·与私有云、公有云协同，云端推送应用、更新算法</br>·云端统一进行设备管理和 固件升级",
+
+    
+
+    "info.title":"产品信息"
+
+ 
+    
+}

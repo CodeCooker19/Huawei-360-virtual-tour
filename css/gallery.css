@@ -1,0 +1,643 @@
+/*
+        * Base structure
+        */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 0px;
+}
+
+
+/*
+        * Global add-ons
+        */
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/*
+        * Top navigation
+        * Hide default border to remove 1px line.
+        */
+.navbar-fixed-top {
+    border: 0;
+}
+
+/*
+        * Sidebar
+        */
+
+/* Hide for mobile, show later */
+.sidebar {
+    display: none;
+    font-family: 'exo', Arial, sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 16px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#main-content {
+    /* Location of the image */
+    background-image: url('https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/ui/contentbg.png');
+
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+    background-attachment: fixed;
+
+    /* This is what makes the background image rescale based
+     on the container's size */
+    background-size: cover;
+
+    /* Set a background color that will be displayed
+     while the background image is loading */
+    background-color: #ffffff;
+}
+
+.visible {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hidden {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#media-title {
+    color: #F50000
+}
+
+#media-type {
+    color: black;
+}
+
+@media (min-width: 992px) {
+.mobileSidebar {display: none;}
+
+}
+@media (max-width: 768px) {
+    .mobileSidebar {display: block; border: none; cursor: pointer; margin-top: 1px; float:right; width: 22px; height: 18px;border-radius: 0px; background: none; position: absolute; right: 25px; top: 20px; margin: 10px; z-index: 100000;transition: right .3s linear;}
+    .mobileSidebar:focus {outline: none;box-shadow: none;}
+    .mobileSidebar span { width: 100%; left: 0px; top: 7px; height: 2px; background: #000000; position: absolute; transition: all 0.3s linear;}
+    .mobileSidebar span:nth-child(2) {top: 0px;}
+    .mobileSidebar span:nth-child(3) {top: 14px;}
+    .openNav {overflow: hidden; z-index: 100000;}
+    .openNav .mobileSidebar {}
+    .openNav .mobileSidebar span {background-color: #000000;}
+    .openNav .mobileSidebar span:nth-child(2){display: none;}
+    .openNav .mobileSidebar span:nth-child(1){transform:rotate(45deg)}
+    .openNav .mobileSidebar span:nth-child(3){transform:rotate(-45deg); top: 7px;}
+    
+    .openNav .sidebar {
+        position: fixed;
+        top: 190px;
+        bottom: 0px;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* Scrollable contents if viewport is shorter than content. */
+        background-color: white;
+        border-right: 1px solid #eee;
+        width: 300px;
+        
+        animation-duration: 0.3s;
+        animation-name: slidein;
+    }
+    .openNav .sidebar-header {
+        font-size: 0.8rem;
+        font-weight: 1000;
+        text-align: left;
+        color: #00000066;
+        opacity: 100%;
+        position: fixed;
+        top: 70px;
+        left: 0px;
+        background-color: white;
+        width: 300px ;
+        height: 120px;
+        padding: 16px;
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+        
+        animation-duration: 0.3s;
+        animation-name: slidein;
+    }
+    .openNav .sidebar-footer {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        background-color: #DC0000;
+        width: 300px;
+        height: 70px;
+        text-align: left;
+        border-bottom: 2px solid #DC000066;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 20px;
+        
+        animation-duration: 0.3s;
+        animation-name: slidein;
+    }
+    
+    @keyframes slidein {
+        from {
+            margin-left: -300px;
+            width: 300px; 
+        } 
+
+        to {
+            margin-left: 0px;
+            width: 300px;
+        }
+    }
+/*
+    .sidebar>ul>li {transform: translateX(50px); opacity: 0; transition: transform .3s,opacity 0.3s;}
+	.openNav .nav-sidebar {transform: translateX(0); opacity: 1;}
+	.nav-sidebar:nth-child(1) {transition-delay: .4s; }
+	.nav-sidebar:nth-child(2) {transition-delay: .5s; }
+	.nav-sidebar:nth-child(3) {transition-delay: .6s; }
+	.nav-sidebar:nth-child(4) {transition-delay: .7s; }
+	.nav-sidebar:nth-child(5) {transition-delay: .8s; }
+	.logo a {position: relative; z-index: 12;}
+*/
+
+}
+.overLay {transition: all 0.3s linear;}
+
+@media (min-width: 992px) {
+    .sidebar {
+        position: fixed;
+        top: 190px;
+        bottom: 0px;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* Scrollable contents if viewport is shorter than content. */
+        background-color: white;
+        border-right: 1px solid #eee;
+        width: 400px;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        position: fixed;
+        top: 190px;
+        bottom: 0px;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* Scrollable contents if viewport is shorter than content. */
+        background-color: white;
+        border-right: 1px solid #eee;
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar-header {
+        font-size: 0.8rem;
+        font-weight: 1000;
+        text-align: left;
+        color: #00000066;
+        opacity: 100%;
+        position: fixed;
+        top: 70px;
+        left: 0px;
+        background-color: white;
+        width: 400px ;
+        height: 120px;
+        padding: 16px;
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+@media (max-width: 992px) {
+    .sidebar-header {
+        font-size: 0.8rem;
+        font-weight: 1000;
+        text-align: left;
+        color: #00000066;
+        opacity: 100%;
+        position: fixed;
+        top: 70px;
+        left: 0px;
+        background-color: white;
+        width: 300px;
+        height: 120px;
+        padding: 16px;
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.sidebar-header #area-name {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    color: black;
+    opacity: 100% !important;
+    line-height: 1.9rem;
+    padding-top: 0.25rem;
+}
+
+#scanner-footer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 70px;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+@media (min-width: 992px) {
+    .sidebar-footer {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        background-color: #DC0000;
+        width: 400px;
+        height: 70px;
+        text-align: left;
+        border-bottom: 2px solid #DC000066;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 992px) {
+    .sidebar-footer {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        background-color: #DC0000;
+        width: 300px;
+        height: 70px;
+        text-align: left;
+        border-bottom: 2px solid #DC000066;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+}
+
+#sidebar-footer-text {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+.sidebar-item {
+    width: 100%;
+    height: 130px;
+
+    text-align: left;
+}
+
+.sidebar-folder-header {
+    height: 65px;
+    background-color: white;
+}
+
+.sidebar-folder-header:hover {
+    background-color: #F4000110;
+}
+
+.sidebar-folder {
+    font-weight: bold;
+    color: black;
+}
+
+.sidebar-folder-btn {
+    font-weight: bold;
+    color: black;
+}
+
+.sidebar-button {
+    text-decoration: none !important;
+    background-color: white;
+}
+
+.sidebar-button:hover {
+    background-color: #F4000110;
+}
+
+.rotate-180 {
+    transition-duration: 0.5s;
+    transition-property: transform;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.rotate-0 {
+    transition-duration: 0.5s;
+    transition-property: transform;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);    
+}
+
+.collapse-box {
+      box-shadow: 0px 0px 4px #88888844;
+
+}
+
+.active-button {
+    background-color: #F50000;
+    height: 130px;
+    width: 8px;
+    position: relative;
+    left: 0px;
+    top: -130px;
+}
+
+.select-option {
+    position: absolute;
+    right: 60px;
+    text-align: right;
+    margin: 0px;
+    padding: 0px;
+}
+
+input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.check {
+    display: block;
+    position: absolute;
+    border: 2px solid #AAAAAA;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    top: 0px;
+    left: 15px;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+    pointer-events: none;
+
+}
+
+
+.inside {
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 100%;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    top: 3px;
+    left: 2.5px;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+    pointer-events: none;
+
+}
+
+input[type=radio]:checked ~ label {
+    color: #0DFF92;
+}
+
+.active {
+    background-color: #F4000110;
+}
+
+.item-title {
+    font-size: 0.8rem;
+    font-weight: 1000;
+    text-align: left;
+    color: #F40001;
+    opacity: 40%;
+    pointer-events: none;
+}
+
+.item-description {
+    font-size: 1.0rem;
+    font-weight: bold;
+    text-align: left;
+    color: #F50000;
+    opacity: 100%;
+    pointer-events: none;
+
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+    margin-right: -21px;
+    /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+.nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #428bca;
+}
+
+
+/*
+        * Main content
+        */
+.main {
+    padding: 20px;
+}
+
+@media (min-width: 992px) {
+    .main {
+        padding-right: 50px;
+        padding-left: 450px;
+        padding-top: 25px;
+    }
+}
+@media (max-width: 992px) {
+    .main {
+        padding-right: 50px;
+        padding-left: 350px;
+        padding-top: 25px;
+    }
+}
+@media (max-width: 768px) {
+    .main {
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 25px;
+    }
+}
+/*
+@media (min-width: 768px) {
+    .main {
+        padding-right: 50px;
+        padding-left: 450px;
+        padding-top: 25px;
+    }
+}
+*/
+
+.main .page-header {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/*
+        * Placeholder dashboard ideas
+        */
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.placeholders h4 {
+    margin-bottom: 0;
+}
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+div#pdf-container{
+    display:none; 
+    text-align: -webkit-center; 
+    width: 100%; 
+}
+
+div#pdf-contents{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+    
+div#pdf-show{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+canvas#pdf-canvas{
+    display: flex;
+    width: 80%;
+}
+
+@media screen and (min-width: 1600px){
+    img.page-btn{
+        height: 8rem;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1599px){
+    img.page-btn{
+        height: 7rem;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px){
+    img.page-btn{
+        height: 6rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px){
+    img.page-btn{
+        height: 5rem;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 599px){
+    img.page-btn{
+        height: 3rem;
+    }
+}

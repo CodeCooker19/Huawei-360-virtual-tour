@@ -1,0 +1,259 @@
+@media screen {
+    div#instructions{
+        display:block;
+    }
+    
+    button#logout-btn{
+        position: absolute; 
+        top: 3rem; 
+        left:3rem; 
+        color:white; 
+        font-size: 1.0rem; 
+        font-weight: bold;
+    }
+    
+    div#instructions-container{
+        height: 100%; 
+        width: 100%; 
+        min-width: 100%;
+    }
+    
+    div#instruction-tag{
+        width:80%; 
+        background-color:rgba(255, 255, 255, 1);
+    }
+    
+    div#theme-tag{
+        width:80%; 
+        background-color:rgba(255, 255, 255, 1);
+    }
+    
+    p.pull-left.h5{
+        letter-spacing: 0.25rem;
+        font-size: 1.25rem;
+    }
+    
+    div.row.mt-3.mb-3{
+        height: 50px;
+    }
+    
+    button#enter-tour-button{
+        width: 200px;
+        height: 50px;
+    }
+}
+
+/* more than 1024px width */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (min-aspect-ratio: 9/16){
+    div.row.h-100.mb-5.pb-5 div.col-sm-8{
+        display: none;
+    }
+    
+    div.row.h-100.mb-5.pb-5 div.col-sm-4.mr-n5{
+        max-width: 635px;
+        flex: unset;
+    }
+}
+
+/* more than 640px width */
+@media screen and (min-width: 200px) and (max-width: 1023px) and (min-aspect-ratio: 9/16){
+    div#instructions{
+        overflow-y: auto;
+    }
+    
+    div.row.h-100.mb-5.pb-5 div.col-sm-8{
+        display: none;
+    }
+    
+    div.row.h-100.mb-5.pb-5 div.col-sm-4.mr-n5{
+        max-width: 635px;
+        flex: unset;
+    }
+    
+    div.col.text-center{
+        margin-bottom: 50px;
+    }
+}
+
+/*------------portrait------------*/
+/* more than 768px width */
+@media screen and (min-width: 768px) and (orientation: portrait){
+    div#instructions{
+        overflow-y: hidden;
+    }
+    
+    div.row.h-100.mb-5.pb-5 div.col-sm-8{
+        display: none;
+    }
+    
+    div.row.h-100.mb-5.pb-5 div.col-sm-4.mr-n5{
+        max-width: 635px;
+        flex: unset;
+    }
+    
+    div.col.text-center{
+        margin-bottom: 50px;
+    }
+}
+
+/* more than 411px width */
+@media screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait){
+    div#instructions{
+        overflow-y: auto;
+    }
+    
+    div#instructions-container{
+        height: 90%; 
+        width: 100%; 
+        min-width: 100%;
+        padding-top: 1.5rem!important;
+    }
+    
+    button#logout-btn{
+        top: 2.5rem;
+        left:2rem;
+    }
+    
+    div#instruction-tag{
+        padding-top: 1rem!important;
+        padding-bottom: .1rem!important;
+    }
+    
+    div.row.h-100.mb-5.pb-5{
+        margin-bottom: 1rem!important;
+    }
+    
+    div.row.h-100.mb-5.pb-5 div.col-sm-8{
+        display: none;
+    }
+    
+    div.row.h-100.mb-5.pb-5 div.col-sm-4.mr-n5{
+        max-width: 635px;
+        flex: unset;
+    }
+    
+    p.pull-left.h5{
+        letter-spacing: 0.25rem;
+        font-size: 1rem;
+    }
+    
+    p.pull-left.my-4{
+        margin-top: .5rem!important;
+        margin-bottom: 1rem!important;
+    }
+    
+    div#theme-tag{
+        margin-top: .1rem!important;
+    }
+    
+    div.my-4.mx-5.text-left{
+        margin-bottom: 1rem!important;
+    }
+    
+    div.col.text-center{
+        margin-bottom: 10px;
+    }
+    
+    div.row.mt-3.mb-3{
+        height: 180px;
+        display: block;
+        margin-top: .1rem!important;
+        margin-bottom: 0.3rem!important;
+    }
+    
+    div.row.mt-3.mb-3 div.col{
+        padding: 10px;
+    }
+    
+    div.row.mt-3.mb-3 div.col button.tech-btn{
+        height: 2.5rem;
+        font-size: .8rem;
+    }
+    
+    button#enter-tour-button{
+        width: 160px;
+        height: 40px;
+    }
+}
+
+/* more than 200px width */
+@media screen and (min-width: 300px) and (max-width: 374px) and (orientation: portrait){
+    div#instructions{
+        overflow-y: auto;
+    }
+    
+    div#instructions-container{
+        height: 80%; 
+        width: 100%; 
+        min-width: 100%;
+        padding-top: 0rem!important;
+    }
+    
+    button#logout-btn{
+        top: 1.5rem;
+        left: 1rem;
+    }
+    
+    div#instruction-tag{
+        padding-top: .5rem!important;
+        padding-bottom: .1rem!important;
+    }
+    
+    div.row.h-100.mb-5.pb-5{
+        margin-bottom: 1rem!important;
+    }
+    
+    div.row.h-100.mb-5.pb-5 div.col-sm-8{
+        display: none;
+    }
+    
+    div.row.h-100.mb-5.pb-5 div.col-sm-4.mr-n5{
+        max-width: 635px;
+        flex: unset;
+    }
+    
+    p.pull-left.h5{
+        letter-spacing: 0.1rem;
+        font-size: .9rem;
+    }
+    
+    p.pull-left.my-4{
+        margin-top: 0rem!important;
+        margin-bottom: .3rem!important;
+    }
+    
+    div#theme-tag{
+        margin-top: .1rem!important;
+    }
+    
+    div.my-4.mx-5.text-left{
+        margin-top: 1rem!important;
+        margin-bottom: 1rem!important;
+    }
+    
+    div.col.text-center{
+        margin-bottom: 10px;
+    }
+    
+    div.row.mt-3.mb-3{
+        height: 160px;
+        display: block;
+        margin-top: 0rem!important;
+        margin-bottom: 0rem!important;
+    }
+    
+    div.row.mt-3.mb-3 div.col{
+        padding: 10px;
+    }
+    
+    div.row.mt-3.mb-3 div.col button.tech-btn{
+        height: 2rem;
+        font-size: .8rem;
+    }
+    
+    button#enter-tour-button{
+        width: 130px;
+        height: 35px;
+        font-size: .8rem;
+    }
+}

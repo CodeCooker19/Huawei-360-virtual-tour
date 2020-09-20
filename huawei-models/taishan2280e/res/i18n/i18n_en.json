@@ -1,0 +1,73 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+"header.nav8":"Back",
+"topTip8":"Back Index",
+
+    "main.title": "2280E Edge Server",
+    "main.text": "The 2280E edge model is specially designed for edge computing scenarios such as multi-access edge computing (MEC), content delivery network (CDN), cloud gaming, cloud phone, smart campus, and video surveillance. It meets the Edge Computing IT Infrastructure (ECII) and Open Telecom IT Infrastructure (OTII) standards for edge servers.",
+
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+
+   
+
+ 
+    "leftMenu1.item1": "Chassis",
+    "leftMenu1.item2": "Chassis cover",
+    "leftMenu1.item3": "Air duct",
+    "leftMenu1.item4": "Heat sink",
+    "leftMenu1.item5": "Supercapacity",
+    "leftMenu1.item6": "Riser module",
+    "leftMenu1.item7": "Disk",
+    "leftMenu1.item13": "Backplane",
+    "leftMenu1.item8": "Dimm",
+    "leftMenu1.item9": "Mainboard",
+    "leftMenu1.item10": "Power",
+  
+    "leftMenu1.item14": "Fan",
+    "leftMenu1.item15": "FlexIO",
+  
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+    "disk_spot":"Up to 10 x 2.5'' SAS/SATA/SSD drives, or 8 x 2.5'' NVMe SSDs.",
+    "flexio_spot":"Up to two FlexIO cards.",
+    "riser_spot":"Riser_Module.",
+    "psu_spot":"100–240 V AC, 240 V DC.",
+    "dimm_spot":"16 DDR4-2933 DIMM slots.",
+    "cpu_spot":"Two Kunpeng 920 processors.",
+    
+    "disk_spot.title":"Disk",
+    "flexio_spot.title":"FlexIO",
+    "riser_spot.title":"Riser_Module",
+    "psu_spot.title":"Power",
+    "dimm_spot.title":"Dimm",
+    "cpu_spot.title":"CPU"
+
+}

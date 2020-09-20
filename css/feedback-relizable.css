@@ -1,0 +1,351 @@
+@media screen{
+    div#feedback-container{
+        display:block;
+    }
+    
+    div#feedback-jumbotron{
+        background-color:rgba(0, 0, 0, 0);
+    }
+    
+    div#feedback-background{
+        display: flex;
+        align-items: center;
+    }
+    
+    button#feedback-exit-btn{
+        display:block; 
+        top:0px; 
+        left:100px;
+    }
+}
+
+/* more than 1366px width */
+@media screen and (min-width: 1700px) and (min-aspect-ratio: 9/16){
+    #feedback-background{
+        width: 50%;
+        height: 90%;
+    }
+    
+    #feedback-title{
+        font-size: 1.5rem;
+        letter-spacing: 0.25rem;
+    }
+    
+    p.h5.text-left.mb-4{
+        font-size: 1.25rem;
+    }
+}
+
+/* more than 1366px width */
+@media screen and (min-width: 1440px) and (max-width: 1699px) and (min-aspect-ratio: 9/16){
+    #feedback-background{
+        width: 50%;
+        height: 90%;
+    }
+    
+    #feedback-title{
+        font-size: 1.3rem;
+        letter-spacing: 0.15rem;
+    }
+    
+    p.h5.text-left.mb-4{
+        font-size: 1rem;
+    }
+}
+
+/* more than 1366px width */
+@media screen and (min-width: 1366px) and (max-width: 1440px) and (min-aspect-ratio: 9/16){
+    #feedback-background{
+        width: 50%;
+        height: 90%;
+    }
+    
+    #feedback-title{
+        font-size: 1.25rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    p.h5.text-left.mb-4{
+        font-size: 15px;
+    }
+}
+
+/* more than 900px width */
+@media screen and (min-width: 1100px) and (max-width: 1365px) and (min-aspect-ratio: 9/16){
+    div#feedback-container{
+        display:block;
+    }
+    
+    #feedback-background{
+        width: 50%;
+        height: 90%;
+    }
+    
+    #feedback-title{
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+    }
+    
+    p.h5.text-left.mb-4{
+        font-size: 13px;
+    }
+      
+    button#feedback-exit-btn{
+        width: 2.4rem;
+        height: 1.8rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    #feedback-exit-btn i.fa.fa-arrow-left{
+        font-size: smaller;
+    }
+    
+    input.feedback-btn.px-3.mt-2{
+        width: 8.5rem;
+        height: 2.2rem;
+        font-size: .75rem;
+    }
+}
+
+/* more than 900px width */
+@media screen and (min-width: 1200px) and (max-width: 1365px) and (min-aspect-ratio: 9/16){
+    #feedback-background{
+        width: 50%;
+        height: 90%;
+    }
+    
+    #feedback-title{
+        font-size: 1.1rem;
+        letter-spacing: 0.07rem;
+    }
+}
+
+/* more than 900px width */
+@media screen and (min-width: 900px) and (max-width: 1099px) and (min-aspect-ratio: 9/16){
+    div#feedback-container{
+        display:block;
+    }
+    
+    #feedback-background{
+        width: 575px;
+        height: 90%;
+    }
+    
+    #feedback-title{
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+    }
+    
+    p.h5.text-left.mb-4{
+        font-size: 13px;
+    }
+      
+    button#feedback-exit-btn{
+        width: 2.4rem;
+        height: 1.8rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    #feedback-exit-btn i.fa.fa-arrow-left{
+        font-size: smaller;
+    }
+    
+    input.feedback-btn.px-3.mt-2{
+        width: 8.5rem;
+        height: 2.2rem;
+        font-size: .75rem;
+    }
+}
+
+/* more than 600px width */
+@media screen and (min-width: 300px) and (max-width: 899px) and (min-aspect-ratio: 9/16){
+    div#feedback-container{
+        display:block;
+        overflow-y: auto;
+    }
+    
+    #feedback-background{
+        width: 400px;
+        margin-top: 50px!important;
+    }
+    
+    #feedback-title{
+        font-size: 10.5px;
+        letter-spacing: 0rem;
+    }
+    
+    div#feedback-content{
+        margin-left: 0rem!important;
+        margin-right: 0rem!important;
+    }
+    
+    p.h5.text-left.mb-4{
+        font-size: 10px;
+    }
+    
+    label#feedback-message{
+        font-size: 10px;
+    }
+      
+    button#feedback-exit-btn{
+        width: 2rem;
+        height: 1.3rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    #feedback-exit-btn i.fa.fa-arrow-left{
+        font-size: x-small;
+        margin-bottom: 2px;
+    }
+    
+    input.feedback-btn.px-3.mt-2{
+        width: 7rem;
+        height: 1.8rem;
+        font-size: .6rem;
+    }
+    ////////////////////////
+    div#feedback-jumbotron{
+        padding: 0rem;
+    }
+    
+    textarea#feedbackField{
+        padding: .5rem!important;
+        font-size: .8rem;
+    }
+}
+
+/*----------------------portraid--------------------------*/
+/* more than 700px width : Portrait*/
+@media screen and (min-width: 700px) and (max-width: 1024px) and (orientation:portrait){
+    div#feedback-container{
+        display:block;
+    }
+    
+    #feedback-background{
+        width: 575px;
+    }
+    
+    #feedback-title{
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+    }
+    
+    p.h5.text-left.mb-4{
+        font-size: 13px;
+    }
+      
+    button#feedback-exit-btn{
+        width: 2.4rem;
+        height: 1.8rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    #feedback-exit-btn i.fa.fa-arrow-left{
+        font-size: smaller;
+    }
+    
+    input.feedback-btn.px-3.mt-2{
+        width: 8.5rem;
+        height: 2.2rem;
+        font-size: .75rem;
+    }
+}
+
+/* more than 700px width : Portrait*/
+@media screen and (min-width: 800px) and (max-width: 1024px) and (orientation:portrait){
+    #feedback-background{
+        height: 80%;
+    }
+}
+
+/* more than 700px width : Portrait*/
+@media screen and (min-width: 700px) and (max-width: 799px) and (orientation:portrait){
+    #feedback-background{
+        height: 90%;
+    }
+}
+
+/* more than 300px width : Portrait*/
+@media screen and (min-width: 300px) and (max-width: 699px) and (orientation:portrait){
+    div#feedback-container{
+        display:block;
+    }
+    
+    #feedback-background{
+        width: 350px;
+        height: 70%;
+    }
+    
+    #feedback-title{
+        font-size: .62rem;
+        letter-spacing: 0rem;
+    }
+    
+    div#feedback-content{
+        margin-left: .5rem!important;
+        margin-right: .5rem!important;
+    }
+    
+    p.h5.text-left.mb-4{
+        font-size: 10px;
+    }
+    
+    label#feedback-message{
+        font-size: 10px;
+    }
+      
+    button#feedback-exit-btn{
+        width: 2rem;
+        height: 1.3rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    #feedback-exit-btn i.fa.fa-arrow-left{
+        font-size: x-small;
+        margin-bottom: 2px;
+    }
+    
+    input.feedback-btn.px-3.mt-2{
+        width: 7rem;
+        height: 1.8rem;
+        font-size: .6rem;
+    }
+}
+
+/* more than 300px width : Portrait*/
+@media screen and (min-width: 300px) and (max-width: 699px) and (min-height: 800px) and (max-height: 850px) and (orientation:portrait){
+    #feedback-background{
+        height: 85%;
+    }
+}
+
+/* more than 300px width : Portrait*/
+@media screen and (min-width: 300px) and (max-width: 699px) and (min-height: 700px) and (max-height: 799px) and (orientation:portrait){
+    #feedback-background{
+        height: 80%;
+    }
+}
+
+/* more than 300px width : Portrait*/
+@media screen and (min-width: 300px) and (max-width: 699px) and (min-height: 600px) and (max-height: 699px) and (orientation:portrait){
+    #feedback-background{
+        height: 80%;
+    }
+}
+
+/* more than 300px width : Portrait*/
+@media screen and (min-width: 300px) and (max-width: 350px) and (orientation:portrait){
+    #feedback-background{
+        width: 320px;
+        height: 80%;
+    }
+    
+    div#feedback-jumbotron{
+        padding: 0rem;
+    }
+}

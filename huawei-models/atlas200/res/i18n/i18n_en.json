@@ -1,0 +1,53 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+    "header.nav8":"Back",
+    "topTip8":"Back Index",
+
+    "main.title": "Atlas 200 AI Accelerator Module",
+    "main.text": "Packaged in a form factor half the size of a credit card, the Atlas 200 AI’s power consumption is as low as 9.5 Watts while supporting 16-channel real-time HD video analytics. This high-performance, low-power product can be deployed on devices such as cameras, drones, and robots.<br /><b>Superb Capacity in a Compact Size</b><br />Powered by the Huawei Ascend AI processor, it supports real-time analytics of 16-channel HD videos in the size of half a credit card.<br /><b>Built for Intelligent Devices and Edge</b><br />Positioned for terminal devices such as cameras and drones, and edge devices such as AI edge stations, it has a Thermal Design Power (TDP) level of only 9.5W.",
+
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+
+    "leftMenu1.item1": "Chassis",
+  
+    "leftMenu1.item2": "Mainboard",
+
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+   
+        
+    "info": "• 16TOPS INT8 @ 13W</br>·16-channel HD video real-time analysis with JPEG decoding supported</br>• 8 GB memory | PCIe 3.0 x 4 lane interface</br>• Operating temperature: -25°C to +80°C (-13°F to +176°F)</br>• Structure and dimensions: 52.6 mm x 38.5 mm x 8.5 mm ",
+
+    
+
+    "info.title":"Product information"
+
+}

@@ -1,0 +1,69 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+"header.nav8":"Back",
+"topTip8":"Back Index",
+
+    "main.title": "XA320 High-Density Server Node",
+    "main.text": "The XA320 High-Density Server Node is a 1U, half-width, 2-socket server node for the TaiShan X6000 high-density server. Powered by Huawei’s 64-bit Kunpeng 920 processors, the server node provides a total of 128 cores running at 2.6 GHz.",
+
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+
+    "leftMenu1.item2": "Air duct",
+
+    "leftMenu1.item1": "Chassis ",
+    
+   "leftMenu1.item3": "PCIe",
+   "leftMenu1.item4": "CPU",
+    "leftMenu1.item6": "Supercapacity",
+ 
+    "leftMenu1.item8": "Raid card",
+    "leftMenu1.item9": "TPM card",
+    "leftMenu1.item10": "Dimm",
+    "leftMenu1.item13": "Heat sink",
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+   
+    "pcie_node": "Up to 1 PCIe 4.0 x16 and 1 PCIe 4.0 x8 slots",
+    "dimm_node": "16 DDR4-2933 slots",
+    "cpu_node": "2 Kunpeng 920",
+    "mgmt_node": "Management network port",
+    "boardnic_node":"2 x GE electrical ports + 1 x 100GE optical port, or 2 x GE electrical ports + 2 x 10GE/25GE optical ports",
+    "raid_node":"RAID 0, 1, 5, 6, 10, 50, or 60, supercapacitor for power failure protection</br>* The liquid-cooled TaiShan X6000 XA320 V2 supports only RAID 0, 1",
+
+    "pcie_node.title":"PCIe Expansion",
+    "dimm_node.title":"Memory",
+    "cpu_node.title":"Processors",
+    "mgmt_node.title":"Management network port",
+    "boardnic_node.title":"LOM ports",
+    "raid_node.title":"RAID",
+    "special":"KunPeng920"
+
+}

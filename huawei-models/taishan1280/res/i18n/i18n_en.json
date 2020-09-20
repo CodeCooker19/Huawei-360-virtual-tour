@@ -1,0 +1,75 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+"header.nav8":"Back",
+"topTip8":"Back Index",
+
+    "main.title": "1280 High-Density Server",
+    "main.text": "The 1280 high-density model is a 1U 2-socket rack server. It features high-performance computing, large-capacity storage, low power consumption, easy management, and easy deployment and is ideal for Internet, distributed storage, cloud computing, big data, and enterprise services.",
+
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+
+   
+
+ 
+    "leftMenu1.item1": "Chassis",
+    "leftMenu1.item2": "Chassis cover",
+    "leftMenu1.item3": "Air duct",
+    "leftMenu1.item4": "Heat sink",
+    "leftMenu1.item5": "Supercapacity",
+    "leftMenu1.item6": "Raid card",
+    "leftMenu1.item7": "Disk",
+    "leftMenu1.item13": "Backplane",
+    "leftMenu1.item8": "Dimm",
+    "leftMenu1.item9": "Mainboard",
+    "leftMenu1.item10": "Power",
+  
+    "leftMenu1.item14": "Fan",
+    "leftMenu1.item15": "FlexIO",
+    "leftMenu1.item16": "Riser module",
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+    "disk_spot":"Up to ten 2.5-inch SAS/SATA HDDs or SSDs, or eight 2.5-inch NVMe SSDs.",
+    "flexio_spot_1":"Up to two FlexIO cards.",
+    "flexio_spot_2":"Up to two FlexIO cards.",
+    "power_spot":"The PSUs are hot-swappable and work in 1+1 redundancy mode.",
+    "fan_spot":"Fans Seven hot-swappable fan modules, allowing one-fan failures.",
+    "dimm_spot":"Up to 32 DDR4 RDIMMs.",
+    "cpu_spot":"Two Kunpeng 920 processors.",
+    
+    "disk_spot.title":"Disk",
+    "flexio_spot_1.title":"FlexIO 1",
+    "flexio_spot_2.title":"FlexIO 2",
+    "power_spot.title":"Power",
+    "fan_spot.title":"Fan",
+    "dimm_spot.title":"Dimm",
+    "cpu_spot.title":"CPU"
+
+}

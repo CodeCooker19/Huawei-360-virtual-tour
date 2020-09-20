@@ -1,0 +1,81 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+"header.nav8":"Back",
+"topTip8":"Back Index",
+
+    "main.title": "2280 Balanced Server",
+    "main.text": "The 2280 Balanced Server is a 2U, 2-socket balanced server powered by Huawei’s 64-bit Kunpeng 920 CPU. The server provides a total of 128 cores running at 2.6 GHz and up to 28 NVMe SSDs.",
+
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+
+   
+
+ 
+    "leftMenu1.item1": "Chassis",
+    "leftMenu1.item2": "Chassis cover",
+    "leftMenu1.item3": "Air duct",
+    "leftMenu1.item4": "Heat sink",
+    "leftMenu1.item5": "Raid card",
+    "leftMenu1.item6": "TPM card",
+    "leftMenu1.item7": "Disk",
+    "leftMenu1.item8": "Dimm",
+    "leftMenu1.item9": "Mainboard",
+    "leftMenu1.item10": "Power",
+    "leftMenu1.item13": "CPU",
+    "leftMenu1.item14": "Fan",
+    "leftMenu1.item15": "FlexIO",
+    "leftMenu1.item16": "Riser module",
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+    "disk_node":"Up to 16 x 3.5-inch or 27 x2.5-inch SAS/SATA HDDs or SSDs, or 16 x 2.5-inch NVMe SSDs",
+    "cpu_node": "2 Kunpeng 920 7260, 5250 or 5230",
+    "dimm_node": "32 DDR4-2933 slots",
+    "raid_node":"RAID 0, 1, 5, 6, 10, 50, or 60, supercapacitor for power failure protection</br>* The liquid-cooled TaiShan X6000 XA320 V2 supports only RAID 0, 1",
+    "pcie_node":"Up to 8 PCIe 4.0 x8,or 3 PCIe 4.0 x16 + 2PCIe 4.0 x8 slots",
+    "boardnic_node":"2 flexible LOM cards,supporting up to 8x GE electrical ports, 8x 25GE/10GE optical ports, or 4 x GE electrical ports + 4 x 25GE/10GE optical ports",
+    "power_node":"2 x 1500 W or 2000W hot-swappable AC PSUs, supporting 1+1 redundancy",
+    "fan_node":"4 hot-swappable fan modules, supporting N+1 redundancy",
+    "chassis_node":"86.1 mm x 447 mm x 790 mm (3.39 in. x 17.60 in. x 31.10 in.)",
+    "ibmc_node":"iBMC card",
+    
+    "disk_node.title":"Local Storage",
+    "cpu_node.title":"Processors",
+    "dimm_node.title":"Memory",
+    "raid_node.title":"RAID",
+    "pcie_node.title":"PCIe Expansion",
+    "boardnic_node.title":"LOM ports",
+    "power_node.title":"Power Supply Units",
+    "fan_node.title":"Fan Modules",
+    "chassis_node.title":"Dimensions(H x W x D)",
+    "ibmc_node.title":"iBMC card",
+    "special":"KunPeng920"
+
+}

@@ -1,0 +1,67 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+"header.nav8":"Back",
+"topTip8":"Back Index",
+
+    "main.title": "X6000 High-Density Server",
+    "main.text": "The X6000 High-Density Server is a 2U, 4-node high-density server powered by Huawei 64-bit Kunpeng Hi1616 processors that can accommodate up to four XR320 2-socket server nodes.",
+
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+
+    "leftMenu1.item2": "Chassis cover",
+
+    "leftMenu1.item1": "Chassis ",
+    
+   "leftMenu1.item3": "Disk",
+  
+    "leftMenu1.item6": "Fan module",
+ 
+    "leftMenu1.item8": "Management",
+    "leftMenu1.item9": "Power",
+    "leftMenu1.item10": "Half-width",
+
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+    "chassis_node": "Universal chassis：86.1 mm x 436 mm x 805 mm (3.39 in. x 17.17 in. x 31.69 in.)</br>Super chassis： 86.1 mm x 436 mm x 819 mm (3.39 in. x 17.17 in. x 32.24 in.)",
+    "node_node": "Up to 4 XR320 servers with X6000 universal chassis or 4 <a href='../xa320v2' target='_blank'>XA320 V2</a> servers with X6000 super chassis",
+    "power_node": "2 x 1,500W enhanced hot-swappable AC PSUs for XR320 server nodes</br>2 x 3,000W hot-swappable AC PSUs for XA320 V2 server nodes</br>supporting 1+1 redundancy",
+    "fan_node": "4 hot-swappable fan modules in N+1 redundancy",
+    "disk_node": "Up to 6 x 2.5-inch SAS/SATA drives or SSDs or NVMe SSDs per Node",
+    
+
+    "chassis_node.title":"Chassis",
+    "node_node.title":"Half-width",
+    "power_node.title":"Power",
+    "fan_node.title":"Fan",
+    "disk_node.title":"Local Storage",
+    "special":"KunPeng920"
+
+}

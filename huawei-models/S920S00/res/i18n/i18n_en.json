@@ -1,0 +1,87 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+    "header.nav8":"Back",
+    "topTip8":"Back Index",
+
+    "main.title": "S920S00",
+    "main.text": "Powered by 2 Huawei Kunpeng 920 processors (5220 or 3210) and 1 Hi1710 intelligent management chip, this server board supports up to 16 DDR4-2933 DIMMs and 8 PCIe 4.0 slots, making it ideal for 2U or 4U rack server chassis.",
+    
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+    
+    "leftMenu1.item1": "Chassis",
+    "leftMenu1.item2": "Chassis Cover",
+    "leftMenu1.item3": "Air Duct",
+    "leftMenu1.item4": "Fan",
+    "leftMenu1.item5": "CPU",
+    "leftMenu1.item16": "Heat Sink",
+    "leftMenu1.item6": "Mainboard",
+    "leftMenu1.item8": "Dimm",
+    "leftMenu1.item9": "Raid card",
+    "leftMenu1.item10": "I/O module",
+    "leftMenu1.item13": "Disk",
+    "leftMenu1.item14": "Backplane",
+    "leftMenu1.item15": "Power",
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+   
+    
+    "Riser卡插槽1":"Riser卡插槽",
+    "Riser卡插槽2": "Riser卡插槽。",
+    "RAID控制扣卡连接器": "RAID控制扣卡连接器。",
+    "灵活IO卡2连接器": "灵活IO卡连接器。",
+    "灵活IO卡1连接器": "灵活IO卡连接器。",
+    "iBMC插卡":"iBMC插卡。",
+    "M.2连接器": "M.2连接器。",
+    "风扇连接器":"风扇连接器。",
+    "前置硬盘背板低速信号连接器":"前置硬盘背板低速信号连接器。",
+    "后置硬盘背板3低速信号连接器":"后置硬盘背板低速信号连接器",
+    "内置硬盘背板电源连接器":"内置硬盘背板电源连接器",
+    "内置硬盘背板低速信号连接器":"内置硬盘背板低速信号连接器",
+    "Riser卡3/后置硬盘背板3电源连接器":"Riser卡3后置硬盘背板3电源连接器",
+    "Riser卡3/后置硬盘背板3 Slimline 连接器":"Riser卡3后置硬盘背板3 Slimline 连接器",
+
+    "Riser卡插槽1.title":"Riser卡插槽",
+    "Riser卡插槽2.title": "Riser卡插槽。",
+    "RAID控制扣卡连接器.title": "RAID控制扣卡连接器。",
+    "灵活IO卡2连接器.title": "灵活IO卡连接器。",
+    "灵活IO卡1连接器.title": "灵活IO卡连接器。",
+    "iBMC插卡.title":"iBMC插卡。",
+    "M.2连接器.title": "M.2连接器。",
+    "风扇连接器.title":"风扇连接器。",
+    "前置硬盘背板低速信号连接器.title":"前置硬盘背板低速信号连接器。",
+    "后置硬盘背板3低速信号连接器.title":"后置硬盘背板低速信号连接器",
+    "内置硬盘背板电源连接器.title":"内置硬盘背板电源连接器",
+    "内置硬盘背板低速信号连接器.title":"内置硬盘背板低速信号连接器",
+    "Riser卡3/后置硬盘背板3电源连接器.title":"Riser卡3后置硬盘背板3电源连接器",
+    "Riser卡3/后置硬盘背板3 Slimline 连接器.title":"Riser卡3后置硬盘背板3 Slimline 连接器"
+
+
+}

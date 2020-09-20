@@ -1,0 +1,76 @@
+{   
+    "lang": "English",
+    "header.nav1": "Original View",
+    "header.nav2": "Explosion",
+    "header.nav3": "Component",
+    "header.nav4": "Specifications",
+    "header.nav5": "Feedback",
+"header.nav8":"Back",
+"topTip8":"Back Index",
+
+    "main.title": "2480 High-Performance Model",
+    "main.text": "The 2480 high-performance model is a 2U 4-socket server powered by Kunpeng 920 (64 cores, 2.6 GHz). The server provides up to 256 cores and 24 NVMe SSDs. The 2480 features high computing density, high storage performance, and fast network speed. It is ideal for scenarios such as high-performance computing, databases, and cloud computing.",
+
+    "leftMenu1": "Component",
+    "leftMenu2": "Resources",
+
+   
+
+ 
+    "leftMenu1.item1": "Chassis",
+    "leftMenu1.item2": "Chassis cover",
+    "leftMenu1.item3": "Air duct",
+    "leftMenu1.item4": "Heat sink",
+    "leftMenu1.item5": "CPU",
+    "leftMenu1.item6": "FlexIO card",
+    "leftMenu1.item7": "Disk",
+    "leftMenu1.item8": "Dimm",
+    "leftMenu1.item9": "Mainboard",
+    "leftMenu1.item10": "Power",
+    "leftMenu1.item13": "CPU",
+    "leftMenu1.item14": "Fan",
+    "leftMenu1.item16": "I/O module",
+    "leftMenu1.item11": "Hide Unselected Objects",
+    "leftMenu1.item12": "Display All",
+
+    "leftMenu2.item1": "User Guide",
+    "leftMenu2.item2": "Tools",
+    "leftMenu2.item3": "Multimedia",
+  "leftMenu2.item4": "Software",
+	"leftMenu2.item5": "Case Studies",
+    "more":"3D Video>>",
+
+    "bottomTip1": "Move the mouse to rotate the model",
+    "bottomTip2": "Move the mouse to move the model",
+    "bottomTip3": "Move the mouse to zoom in or out the model",
+    "bottomTip4": "Display/Hide Labels",
+    "bottomTip5": "QR Code",
+
+    
+    "topTip1": "Display the original view",
+    "topTip2": "Display the exploded view",
+    "topTip3": "Moving a component",
+    "topTip4": "Product Specifications",
+    "topTip5": "Email feedback",
+
+    
+    "disk_node": "Various drive configurations. For details:</br>Server with 8 x 2.5-inch drives in Expander mode</br>Server with 24 x 2.5-inch drives in Expander mode",
+    "chassis_node": "86.1 mm (2U) x 447 mm x 790 mm (3.39 in. x 17.60 in. x 31.10 in.)",
+    "usb_node": "USB 3.0 port",
+    "nic_node":"One FlexIO card that provides four 25GE or 10GE optical ports and supports PXE",
+    "power_node":"2 x 1500 W, 2000 W, or 3000 W hot-swappable AC PSUs, supporting 1+1 redundancy",
+    "dimm_node":"32 DDR4-2933 slots",
+    "cpu_node":"Four HUAWEI Kunpeng 920 processors with 64 cores or 48 cores at a frequency of 2.6 GHz",
+   
+
+    
+    "disk_node.title":"Local Storage",
+    "chassis_node.title":"Dimensions(H x W x D)",
+    "usb_node.title":"USB 3.0 Port",
+    "nic_node.title":"FlexIO Card",
+    "power_node.title":"Power Supply Units",
+    "dimm_node.title":"Memory",
+    "cpu_node.title":"Processors",
+    "special":"KunPeng920"
+
+}

@@ -1,0 +1,404 @@
+{
+    "space": {
+        "view": {
+            "org": [
+                -10.1408,
+                186.817,
+                329.754
+            ],
+            "up": [
+                -9.99744,
+                270.7,
+                289.751
+            ],
+            "target": [
+                -6.47035,
+                26.8058,
+                -5.7602
+            ],
+            "fov": 52.2338
+        },
+        "bbox": [
+            0.00425532,
+            0.0275334,
+            -0.114067,
+            0.0245115
+        ],
+        "root": {
+            "i": [
+                {
+                    "name": "Atlas_500_A_1",
+                    "anims": [
+                        {
+                            "id": 1,
+                            "pos": [
+                                {
+                                    "t": 0,
+                                    "v": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                },
+                                {
+                                    "t": 1,
+                                    "v": [
+                                        0,
+                                        107.272,
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "object": 0,
+                    "mtl": 0
+                },
+                {
+                    "name": "Atlas_500_B",
+                    "anims": [
+                        {
+                            "id": 1,
+                            "pos": [
+                                {
+                                    "t": 0,
+                                    "v": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                },
+                                {
+                                    "t": 1,
+                                    "v": [
+                                        0,
+                                        19.6568,
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "object": 1,
+                    "mtl": 1
+                },
+                {
+                    "name": "M_2",
+                    "anims": [
+                        {
+                            "id": 1,
+                            "pos": [
+                                {
+                                    "t": 0,
+                                    "v": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                },
+                                {
+                                    "t": 1,
+                                    "v": [
+                                        0,
+                                        19.6568,
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "object": 2,
+                    "mtl": 2
+                },
+                {
+                    "name": "Atlas_500_A_2",
+                    "anims": [
+                        {
+                            "id": 1,
+                            "pos": [
+                                {
+                                    "t": 0,
+                                    "v": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                },
+                                {
+                                    "t": 1,
+                                    "v": [
+                                        0,
+                                        -78.016,
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "object": 3,
+                    "mtl": 0
+                },
+                {
+                    "name": "Markup Layer",
+                    "i": [
+                        {
+                            "name": "info",
+                            "markup": {
+                                "type": 8,
+                                "widthA": 54.7687,
+                                "pin0": [
+                                    14.3117,
+                                    25.4277,
+                                    108.69
+                                ],
+                                "label": [
+                                    14.5256,
+                                    30.7657,
+                                    106.011
+                                ]
+                            },
+                            "hotspot": 2,
+                            "s": 11,
+                            "i": [
+                                {
+                                    "name": "hotspot",
+                                    "anims": [
+                                        {
+                                            "id": 1,
+                                            "pos": [
+                                                {
+                                                    "t": 0,
+                                                    "v": [
+                                                        14.3117,
+                                                        25.4277,
+                                                        111.227
+                                                    ]
+                                                },
+                                                {
+                                                    "t": 1,
+                                                    "v": [
+                                                        14.3117,
+                                                        -54.5835,
+                                                        111.227
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "bbaxis": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "bbscale": 8,
+                                    "bbunit": "3d",
+                                    "s": 11,
+                                    "i": [
+                                        {
+                                            "name": "obj",
+                                            "object": 4,
+                                            "mtl": 3,
+                                            "i": [
+                                                {
+                                                    "name": "obj",
+                                                    "object": 5,
+                                                    "mtl": 3
+                                                },
+                                                {
+                                                    "name": "obj",
+                                                    "object": 6,
+                                                    "mtl": 4,
+                                                    "opacity": 0
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "tm": [
+                                        1,
+                                        0,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                        0,
+                                        1,
+                                        14.3117,
+                                        25.4277,
+                                        111.227
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "stdLight.1",
+                    "light": {
+                        "color": [
+                            0.5,
+                            0.5,
+                            0.5
+                        ],
+                        "dir": [
+                            -0.784465,
+                            -0.588348,
+                            -0.196116
+                        ],
+                        "type": 1
+                    },
+                    "s": 131
+                },
+                {
+                    "name": "stdLight.2",
+                    "light": {
+                        "color": [
+                            0.8,
+                            0.8,
+                            0.9
+                        ],
+                        "dir": [
+                            0.590796,
+                            0.324938,
+                            -0.738495
+                        ],
+                        "type": 1
+                    },
+                    "s": 131
+                },
+                {
+                    "name": "stdLight.3",
+                    "light": {
+                        "color": [
+                            0.9,
+                            0.9,
+                            0.9
+                        ],
+                        "dir": [
+                            0.00999937,
+                            0.00499969,
+                            0.999938
+                        ],
+                        "type": 1
+                    },
+                    "s": 131
+                }
+            ]
+        },
+        "meshes": [
+            {
+                "ref": "obj0.bin"
+            },
+            {
+                "ref": "obj1.bin"
+            },
+            {
+                "ref": "obj2.bin"
+            },
+            {
+                "ref": "obj3.bin"
+            },
+            {
+                "ref": "obj4.bin"
+            },
+            {
+                "ref": "obj5.bin"
+            },
+            {
+                "ref": "obj6.bin"
+            }
+        ],
+        "materials": [
+            {
+                "name": "Atlsa_500_A",
+                "diffuse": {
+                    "color": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "texture": "atlsa_500_a.jpg",
+                    "format": "rgb"
+                },
+                "emissive": {
+                    "texture": "atlsa_500_a.jpg",
+                    "format": "rgb"
+                },
+                "phong": 10
+            },
+            {
+                "name": "Atlsa_500_B",
+                "diffuse": {
+                    "color": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "texture": "atlsa_500_b.jpg",
+                    "format": "rgb"
+                },
+                "emissive": {
+                    "texture": "atlsa_500_b.jpg",
+                    "format": "rgb"
+                },
+                "phong": 10
+            },
+            {
+                "name": "M_2",
+                "diffuse": {
+                    "color": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "texture": "m_2.JPG",
+                    "format": "rgb"
+                },
+                "emissive": {
+                    "texture": "m_2.JPG",
+                    "format": "rgb"
+                },
+                "phong": 10
+            },
+            {
+                "name": "markups-bk",
+                "emissive": {
+                    "color": [
+                        1,
+                        0.4,
+                        0.4
+                    ]
+                },
+                "phong": 64
+            },
+            {
+                "diffuse": [
+                    0.8,
+                    0.8,
+                    0.8
+                ],
+                "specular": [
+                    0.6,
+                    0.6,
+                    0.6
+                ],
+                "phong": 64
+            }
+        ],
+        "anims": [
+            {
+                "name": "Animation 1",
+                "id": 1,
+                "start": 0,
+                "end": 1,
+                "time": 0,
+                "fps": 30,
+                "active": true
+            }
+        ],
+        "config": {
+            "bkfaces": false
+        },
+        "bk": "bkface.jpg"
+    }
+}

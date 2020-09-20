@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>three.js webgl - lights - hemisphere light</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="css/materialize.min.css">
+
+    <!-- Video.js -->
+    <link href="../libraries/videojs/video-js.css" rel="stylesheet" />
+
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="../libraries/videojs/videojs-ie8.min.js"></script>
+
+</head>
+
+<body>
+    <div id="loading-screen">
+        <h5 id="loading-text">Loading Model</h5>
+    </div>
+
+    <div id="ads-video-container">
+        <!--
+        <video id="target-video" class="video-js vjs-big-play-centered vjs-16-9" style="display:block; height 100%; width: 100%;" controls preload="auto" width="100%" height="100%" data-setup='{
+                    "aspectRatio":"16:9", "autoplay": "true"
+                    }'>
+            <source src="https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/CLOUD/Zone%204-EI%20Healthcare%20%2B%20Education/Scanner.mp4" />
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+        -->
+        <video id="vid1" class="video-js vjs-default-skin vjs-big-play-centered"
+            controls
+            width="100%"
+            height="100%"
+            data-setup='{ 
+                "techOrder": ["html5"],
+                "aspectRatio":"16:9", "fluid": true,
+                "sources": [{ "type": "video/mp4", "src": "https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/content/CLOUD/Zone%204-EI%20Healthcare%20%2B%20Education/Scanner.mp4"}]
+            }'
+          ></video>
+    </div>
+    
+    <div id="container"></div>
+    <div id="digital-meter">
+        <div id="fruit-details">
+            <div id="pricing">
+                <div>
+                    <div class="small-font">
+                        Smart Recognition
+                    </div>
+                    <div id="fruit">Apples</div>
+                </div>
+
+                <div>
+                    <div class="small-font">
+                        Price
+                    </div>
+                    <div id="price">$ 100</div>
+                </div>
+
+                <div>
+                    <div class="small-font">
+                        Weight
+                    </div>
+                    <div id="weight">250G</div>
+                </div>
+
+            </div>
+        </div>
+        <div id="scanning">
+            <span>Scanning</span>
+        </div>
+
+
+    </div>
+
+    <video id="scan_video" src="./video/scanning.mp4"></video>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script src="js/html2canvas.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script type="module" src="main2.js"></script>
+
+
+
+    <script src="../libraries/videojs/video.js"></script>
+
+</body>
+
+</html>

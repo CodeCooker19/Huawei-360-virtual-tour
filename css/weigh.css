@@ -1,0 +1,13 @@
+#scanner-footer #sidebar-footer-text{
+    color: black; 
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 575px) and (orientation: portrait){
+    #scanner-footer #sidebar-footer-text{
+        font-size: 1rem;
+    }
+    #scanner-foote{
+        padding-left: 10px; 
+    }
+}

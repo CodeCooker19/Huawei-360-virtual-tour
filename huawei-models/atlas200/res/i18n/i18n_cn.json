@@ -1,0 +1,52 @@
+{    
+    "lang": "中文",
+    "header.nav1": "原始视图",
+    "header.nav2": "爆炸视图",
+    "header.nav3": "拆卸部件",
+    "header.nav4": "产品规格",
+    "header.nav5": "反馈",
+    "header.nav8":"返回",
+    "topTip8":"返回首页",
+    "main.title": "Atlas 200 AI加速模块",
+    "main.text": "Atlas 200是一款高性能低功耗的AI加速模块，外形尺寸只有半张信用卡的大小，耗电量仅为9.5瓦，支持16通道实时高清视频分析，可以部署在摄像头、无人机和机器人等设备上。<br /><b>小身材大能量</b><br />基于华为Ascend AI处理器，半张信用卡大小即可支持16路高清视频实时分析<br /><b>智能端侧、边侧设备</b><br />面向摄像头、无人机等端侧设备，及智能小站等边缘侧设备部署，TDP功耗9.5W",
+
+    "leftMenu1": "部件",
+    "leftMenu2": "更多资源",
+
+    "leftMenu1.item1": "外壳",
+  
+    "leftMenu1.item2": "主板",
+
+  
+    "leftMenu1.item11": "隐藏未选中",
+    "leftMenu1.item12": "显示全部",
+
+    "leftMenu2.item1": "用户指南",
+    "leftMenu2.item2": "工具",
+    "leftMenu2.item3": "多媒体",
+   "leftMenu2.item4": "软件",
+	"leftMenu2.item5": "成功案例",
+    "more": "3D视频>>",
+    
+
+    "bottomTip1": "选中后，移动鼠标旋转模型",
+    "bottomTip2": "选中后，移动鼠标移动模型",
+    "bottomTip3": "选中后，移动鼠标缩放模型",
+    "bottomTip4": "显示/隐藏标签",
+    "bottomTip5": "分享二维码",
+
+    "topTip1": "恢复原始视图",
+    "topTip2": "展示爆炸视图",
+    "topTip3": "移动部件",
+    "topTip4": "展示产品规格",
+    "topTip5": "邮件反馈",
+    
+    "info": "·16TOPS INT8 @ 13W</br>·16路高清视频实时分析，支持JPEG解码</br>·8GB内存  |  PCIe 3.0 x 4接口</br>·工作温度：-25℃～+80℃</br>·尺寸：52 x 38 x 10.2 mm ",
+
+    
+
+    "info.title":"产品信息"
+
+ 
+    
+}

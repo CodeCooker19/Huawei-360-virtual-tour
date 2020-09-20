@@ -1,0 +1,72 @@
+{    
+    "lang": "中文",
+    "header.nav1": "原始视图",
+    "header.nav2": "爆炸视图",
+    "header.nav3": "拆卸部件",
+    "header.nav4": "产品规格",
+    "header.nav5": "反馈",
+    "header.nav8":"返回",
+    "topTip8":"返回首页",
+    "main.title": "2480 高性能型",
+    "main.text": "2480是基于华为鲲鹏920处理器的2U4路高性能型服务器，最高能够提供256核、2.6GHz主频的计算能力和最多24个NVMe SSD硬盘。具有计算密度高、存储性能好以及网络速度快的特点，适合为高性能计算、数据库、云计算等应用场景的工作负载进行高效加速。",
+
+    "leftMenu1": "部件",
+    "leftMenu2": "更多资源",
+
+    "leftMenu1.item1": "机箱",
+    "leftMenu1.item2": "机箱盖",
+    "leftMenu1.item3": "导风罩",
+    "leftMenu1.item4": "散热器",
+    "leftMenu1.item5": "CPU",
+    "leftMenu1.item6": "灵活IO卡",
+    "leftMenu1.item7": "硬盘",
+    "leftMenu1.item8": "内存",
+    "leftMenu1.item9": "主板",
+    "leftMenu1.item10": "电源",
+    "leftMenu1.item13": "CPU",
+    "leftMenu1.item14": "风扇",
+    "leftMenu1.item16": "IO模组",
+    "leftMenu1.item11": "隐藏未选中",
+    "leftMenu1.item12": "显示全部",
+
+    "leftMenu2.item1": "用户指南",
+    "leftMenu2.item2": "工具",
+    "leftMenu2.item3": "多媒体",
+   "leftMenu2.item4": "软件",
+	"leftMenu2.item5": "成功案例",
+    "more": "3D视频>>",
+    
+
+    "bottomTip1": "选中后，移动鼠标旋转模型",
+    "bottomTip2": "选中后，移动鼠标移动模型",
+    "bottomTip3": "选中后，移动鼠标缩放模型",
+    "bottomTip4": "显示/隐藏标签",
+    "bottomTip5": "分享二维码",
+
+    "topTip1": "恢复原始视图",
+    "topTip2": "展示爆炸视图",
+    "topTip3": "移动部件",
+    "topTip4": "展示产品规格",
+    "topTip5": "邮件反馈",
+    
+   "disk_node": "可提供多种不同的硬盘配置规格如下:</br>8x2.5英寸硬盘配置</br>24x2.5英寸硬盘配置",
+    "chassis_node": "86.1 mm（2U）x447 mmx790 mm",
+    "usb_node": "USB 3.0接口",
+    "nic_node":"支持1张灵活IO卡，灵活IO卡提供4个25GE/10GE光口，支持PXE功能",
+    "power_node":"2个热插拔1500W/2000W/3000W交流电源模块，支持1+1冗余",
+    "dimm_node":"32个DDR4-2933插槽",
+    "cpu_node":"支持4路华为鲲鹏920处理器，处理器包含64cores，48cores两种配置，频率均为2.6GHz",
+   
+
+    
+    "disk_node.title":"本地存储",
+    "chassis_node.title":"尺寸(宽x深x高)",
+    "usb_node.title":"USB 3.0接口",
+    "nic_node.title":"灵活IO卡",
+    "power_node.title":"电源",
+    "dimm_node.title":"内存",
+    "cpu_node.title":"处理器型号"
+   
+
+    
+}

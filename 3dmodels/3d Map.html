@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - lights - hemisphere light</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<style>
+			body {
+				color: rgba(0, 0, 0, 0);
+			}
+			a {
+				color: #08f;
+			}
+		</style>
+		<link rel="stylesheet" href="css/materialize.min.css">
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+		<div id="overlayName" class="overlayName">
+
+			Main Hall
+
+		</div>
+        
+        <div id="locationOverlay" class="overlayName">
+            <div>You Are Here</div>
+            <div><img src="../images/ui/location.png" style="width: 64px; height: 64px;"></div>
+        </div>
+        
+        <div id="overlay-1" class="overlayName">
+            <div class="overlayBar" id="overlay-bar-1"></div>
+            <span id="overlay-text-1">Overlay 1</span>
+        </div>
+        <div id="overlay-2" class="overlayName">
+            <div class="overlayBar" id="overlay-bar-2"></div>
+            <span id="overlay-text-2">Overlay 2</span>
+        </div>
+        <div id="overlay-3" class="overlayName">
+            <div class="overlayBar" id="overlay-bar-3"></div>
+            <span id="overlay-text-3">Overlay 3</span>
+        </div>
+        <div id="overlay-4" class="overlayName">
+            <div class="overlayBar" id="overlay-bar-4"></div>
+            <span id="overlay-text-4">Overlay 4</span>
+        </div>
+        <div id="overlay-5" class="overlayName">
+            <div class="overlayBar" id="overlay-bar-5"></div>
+            <span id="overlay-text-5">Overlay 5</span>
+        </div>
+        <div id="overlay-6" class="overlayName">
+            <div class="overlayBar" id="overlay-bar-6"></div>
+            <span id="overlay-text-6">Overlay 6</span>
+        </div>
+        <div id="overlay-7" class="overlayName">
+            <div class="overlayBar" id="overlay-bar-7"></div>
+            <span id="overlay-text-7">Overlay 7</span>
+        </div>
+		
+		<script type="x-shader/x-vertex" id="vertexShader">
+
+			varying vec3 vWorldPosition;
+
+			void main() {
+
+				vec4 worldPosition = modelMatrix * vec4( position, 1.0 );
+				vWorldPosition = worldPosition.xyz;
+
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+			}
+
+		</script>
+
+		<script type="x-shader/x-fragment" id="fragmentShader">
+
+			uniform vec3 topColor;
+			uniform vec3 bottomColor;
+			uniform float offset;
+			uniform float exponent;
+
+			varying vec3 vWorldPosition;
+
+			void main() {
+
+				float h = normalize( vWorldPosition + offset ).y;
+				gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( max( h , 0.0), exponent ), 0.0 ) ), 1.0 );
+
+			}
+
+		</script>
+
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/materialize.min.js"></script>
+		<script type="module" src="main.js">
+
+		</script>
+	</body>
+</html>

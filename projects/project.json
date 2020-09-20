@@ -1,0 +1,348 @@
+{
+   "id":"Project 1",
+   "scenes":[
+      {
+         "id":"Entrance",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/backgrounds/entrance_00000.jpg",
+         "rotation":"0 -10 0",
+         "interactives":[
+            {
+               "id":"To Partners",
+               "type":"Navigation",
+               "position":"0.2 0 -3.5",
+               "rotation":"90 0 190",
+               "scale":"1 1 1",
+               "content-url":"Partners"
+            },
+            {
+               "id":"Welcome Screen",
+               "type":"Welcome",
+               "position":"-0.2 1.75 -2",
+               "rotation":"0 0 0",
+               "scale":"1 1 1",
+               "content-url":"./images/ui/card_registration.png"
+            }
+         ],
+         "media":[
+         ]
+      },
+      {
+         "id":"Partners",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/backgrounds/entrance%202_00000.jpg",
+         "rotation":"0 90 0",
+         "interactives":[
+            {
+               "id":"To Main Area",
+               "type":"Navigation",
+               "position":"-5.5 -2 2",
+               "rotation":"90 0 25",
+               "scale":"1.5 1.5 1.5",
+               "content-url":"Main Area"
+            },
+            {
+               "id":"To Entrance",
+               "type":"Navigation",
+               "position":"2 -2 1",
+               "rotation":"90 0 -45",
+               "scale":"1.5 1.5 1.5",
+               "content-url":"Entrance"
+            },
+            {
+               "id":"Our Partners",
+               "type":"Link",
+               "position":"-3 1.1 -0.25",
+               "rotation":"0 55 0",
+               "scale":"3 2 1",
+               "content-url":"https://www.spotify.com/sg-en/",
+               "thumbnail-url":"images/ui/logowall.png"
+            }
+         ],
+         "media":[
+            {
+               "id":"When Huawei Cloud AI Meets Enterprises",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/When%20Huawei%20Cloud%2BAI%20Meets%20Enterprises.mp4"
+            }
+         ]
+      },
+      {
+         "id":"Main Area",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/backgrounds/main area_00000.jpg",
+         "rotation":"0 0 0",
+         "interactives":[
+            {
+               "id":"To Partners",
+               "type":"Navigation",
+               "position":"-2.4 -0 -4",
+               "rotation":"90 0 190",
+               "scale":"1 1 1",
+               "content-url":"Partners"
+            },
+            {
+               "id":"To Retail & Fintech",
+               "type":"Navigation",
+               "position":"3.5 0 -5",
+               "rotation":"90 0 220",
+               "scale":"1 1 1",
+               "content-url":"Retail & Fintech"
+            },
+            {
+               "id":"To Education & Health",
+               "type":"Navigation",
+               "position":"5 -0 -3.5",
+               "rotation":"90 0 -70",
+               "scale":"1 1 1",
+               "content-url":"Education & Health"
+            },
+            {
+               "id":"When Huawei Cloud AI Meets Enterprises",
+               "type":"Video",
+               "position":"6 1.375 0.75",
+               "rotation":"0 -90 0",
+               "scale":"0.55 0.5 0.5",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/When%20Huawei%20Cloud%2BAI%20Meets%20Enterprises.mp4",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/When%20Huawei%20Cloud%2BAI%20Meets%20Enterprises.PNG"
+            },
+            {
+               "id":"Huawei Cloud EI Intelligence Twins",
+               "type":"Video",
+               "position":"6 1.3 2.75",
+               "rotation":"0 -120 0",
+               "scale":"0.55 0.5 0.5",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/Huawei%20Cloud%20EI%20Intelligence%20Twins.mp4",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/Huawei%20Cloud%20EI%20Intelligence%20Twins.PNG"
+            }
+         ],
+         "media":[
+            {
+               "id":"When Huawei Cloud AI Meets Enterprises",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/When%20Huawei%20Cloud%2BAI%20Meets%20Enterprises.mp4"
+            },
+            {
+               "id":"Huawei Cloud EI Intelligence Twins",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/Huawei%20Cloud%20EI%20Intelligence%20Twins.mp4"
+            },
+            {
+               "id":"Huawei AI Lab",
+               "type":"Image",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/images/ailab_1.jpg"
+            }
+         ]
+      },
+      {
+         "id":"Retail & Fintech",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/backgrounds/retail_00000.jpg",
+         "rotation":"0 -90 0",
+         "interactives":[
+            {
+               "id":"To Main Hall",
+               "type":"Navigation",
+               "position":"-3 -2 5",
+               "rotation":"90 0 40",
+               "scale":"1.5 1.5 1.5",
+               "content-url":"Main Area"
+            },
+            {
+               "id":"To Education & Health",
+               "type":"Navigation",
+               "position":"3 -2 6",
+               "rotation":"90 0 -90",
+               "scale":"1.5 1.5 1.5",
+               "content-url":"Education & Health"
+            },
+            {
+               "id":"Huawei AI Lab",
+               "type":"Image",
+               "position":"-0.4 1.75 -4",
+               "rotation":"0 0 0",
+               "scale":"1.2 1 1",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/images/ailab_1.jpg"
+            },
+            {
+               "id":"Model 1",
+               "type":"Model",
+               "position":"-3.25 1 -4",
+               "rotation":"0 0 0",
+               "scale":"0.5 0.5 0.5",
+               "value":"Model",
+               "content-url":"./models/scan_machine_02.gltf"
+            },
+            {
+               "id":"1280 Balanced Model",
+               "type":"Embedded",
+               "position":"3 0.75 -0.05",
+               "rotation":"0 -90 0",
+               "scale":"0.5 0.5 0.5",
+               "value":"Model",
+               "content-url":"huawei/taishan2180/index.html"
+            }
+         ],
+         "media":[
+            {
+               "id":"Huawei AI Lab",
+               "type":"Image",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/images/ailab_1.jpg"
+            },
+            {
+               "id":"Berlin 1",
+               "type":"Image",
+               "content-url":"media/gallery/images/berlin1.jpg"
+            },
+            {
+               "id":"1280 Balanced Model",
+               "type":"Embedded",
+               "content-url":"huawei/taishan1280/index.html?lang=en"
+            },
+            {
+               "id":"2180 Balanced Model",
+               "type":"Embedded",
+               "content-url":"huawei/taishan2180/index.html?lang=en"
+            },
+            {
+               "id":"Weighing Scale",
+               "type":"Embedded",
+               "content-url":"3dmodels/weighing%20Machine.html"
+            }
+         ]
+      },
+      {
+         "id":"Education & Health",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/backgrounds/education_00000.jpg",
+         "rotation":"0 -90 0",
+         "interactives":[
+            {
+               "id":"To Main Hall",
+               "type":"Navigation",
+               "position":"-5 -2 3",
+               "rotation":"90 0 90",
+               "scale":"1.5 1.5 1.5",
+               "content-url":"Main Area"
+            },
+            {
+               "id":"To Conference Room",
+               "type":"Navigation",
+               "position":"4 -2 5",
+               "rotation":"90 0 -80",
+               "scale":"1.5 1.5 1.5",
+               "content-url":"Conference Room"
+            },
+            {
+               "id":"Huawei AI Lab 1",
+               "type":"Image",
+               "position":"0.3 1.3 -5",
+               "rotation":"0 0 0",
+               "scale":"1.2 1 1",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/images/ailab_1.jpg"
+            },
+            {
+               "id":"Huawei AI Lab 2",
+               "type":"Image",
+               "position":"-2.5 1.35 -4",
+               "rotation":"0 30 0",
+               "scale":"1.1 1 1",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/images/ailab_2.jpg"
+            },
+            {
+               "id":"Huawei AI Lab 3",
+               "type":"Image",
+               "position":"3.6 1.35 -4",
+               "rotation":"0 -40 0",
+               "scale":"1.2 1 1",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/images/ailab_3.jpg"
+            },
+            {
+               "id":"Model 1",
+               "type":"Model",
+               "position":"-3.25 1 -4",
+               "rotation":"0 0 0",
+               "scale":"0.5 0.5 0.5",
+               "value":"Model",
+               "content-url":"./models/scan_machine_02.gltf"
+            },
+            {
+               "id":"When Huawei Cloud AI Meets Enterprises",
+               "type":"Video",
+               "position":"5 1.3 0",
+               "rotation":"0 -105 0",
+               "scale":"1.25 1 1",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/When%20Huawei%20Cloud%2BAI%20Meets%20Enterprises.mp4",
+               "thumbnail-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/When%20Huawei%20Cloud%2BAI%20Meets%20Enterprises.PNG"
+            },
+            {
+               "id":"1280 Balanced Model",
+               "type":"Embedded",
+               "position":"1 1.25 4",
+               "rotation":"0 0 0",
+               "scale":"0.5 0.5 0.5",
+               "value":"Model",
+               "content-url":"huawei/taishan1280/index.html"
+            },
+            {
+               "id":"2180 Balanced Model",
+               "type":"Embedded",
+               "position":"2.5 1.25 4",
+               "rotation":"0 0 0",
+               "scale":"0.5 0.5 0.5",
+               "value":"Model",
+               "content-url":"huawei/taishan2180/index.html"
+            }
+         ],
+         "media":[
+            {
+               "id":"Huawei AI Lab 1",
+               "type":"Image",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/images/ailab_1.jpg"
+            },
+            {
+               "id":"Huawei AI Lab 2",
+               "type":"Image",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/images/ailab_2.jpg"
+            },
+            {
+               "id":"Huawei AI Lab 3",
+               "type":"Image",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/images/ailab_3.jpg"
+            },
+            {
+               "id":"When Huawei Cloud AI Meets Enterprises",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/When%20Huawei%20Cloud%2BAI%20Meets%20Enterprises.mp4"
+            },
+            {
+               "id":"1280 Balanced Model",
+               "type":"Embedded",
+               "content-url":"huawei/taishan1280/index.html?lang=en"
+            },
+            {
+               "id":"2180 Balanced Model",
+               "type":"Embedded",
+               "content-url":"huawei/taishan2180/index.html?lang=en"
+            }
+         ]
+      },
+      {
+         "id":"Conference Room",
+         "background-url":"https://obs.ap-southeast-3.myhuaweicloud.com:443/hiverlabtest/huawei-virtualtour/backgrounds/conference room_00000.jpg",
+         "rotation":"0 0 0",
+         "interactives":[
+            {
+               "id":"To Education & Health",
+               "type":"Navigation",
+               "position":"3 -2 0",
+               "rotation":"90 0 -20",
+               "scale":"1 1 1",
+               "content-url":"Education & Health"
+            }
+         ],
+         "media":[
+            {
+               "id":"When Huawei Cloud AI Meets Enterprises",
+               "type":"Video",
+               "content-url":"https://obs.ap-southeast-3.myhuaweicloud.com/hiverlabtest/huawei-virtualtour/media/gallery/videos/When%20Huawei%20Cloud%2BAI%20Meets%20Enterprises.mp4"
+            }
+         ]
+      }
+   ]
+}

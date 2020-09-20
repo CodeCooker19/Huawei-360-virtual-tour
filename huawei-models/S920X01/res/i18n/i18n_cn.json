@@ -1,0 +1,77 @@
+{    
+    "lang": "中文",
+    "header.nav1": "原始视图",
+    "header.nav2": "安装整机",
+    "header.nav3": "拆卸部件",
+    "header.nav4": "产品规格",
+    "header.nav5": "反馈",
+    "header.nav8":"返回",
+    "topTip8":"返回首页",
+    "main.title": "S920X01",
+    "main.text": "搭载1颗鲲鹏920处理器，Hi1710智能管理芯片，最多支持16个DDR4-2933 内存插槽、3个PCIe 4.0插槽，适配2U或4U高度机箱的机架服务器，适用于入门级数据处理场景。",
+
+    "leftMenu1": "部件",
+    "leftMenu2": "更多资源",
+
+    "leftMenu1.item1": "机箱",
+    "leftMenu1.item2": "机箱盖",
+    "leftMenu1.item3": "导风罩",
+    "leftMenu1.item4": "风扇",
+    "leftMenu1.item16": "散热器",
+    "leftMenu1.item6": "主板",
+    "leftMenu1.item8": "内存",
+    "leftMenu1.item9": "灵活IO卡",
+    "leftMenu1.item10": "IO模组",
+    "leftMenu1.item13": "硬盘",
+    "leftMenu1.item14": "硬盘背板",
+    "leftMenu1.item15": "电源",
+    "leftMenu1.item11": "隐藏未选中",
+    "leftMenu1.item12": "显示全部",
+
+    "leftMenu2.item1": "用户指南",
+    "leftMenu2.item2": "工具",
+    "leftMenu2.item3": "多媒体",
+   "leftMenu2.item4": "软件",
+	"leftMenu2.item5": "成功案例",
+    "more": "3D视频>>",
+    
+
+    "bottomTip1": "选中后，移动鼠标旋转模型",
+    "bottomTip2": "选中后，移动鼠标移动模型",
+    "bottomTip3": "选中后，移动鼠标缩放模型",
+    "bottomTip4": "显示/隐藏标签",
+    "bottomTip5": "分享二维码",
+
+    "topTip1": "恢复原始视图",
+    "topTip2": "安装整机视图",
+    "topTip3": "移动部件",
+    "topTip4": "展示产品规格",
+    "topTip5": "邮件反馈",
+    
+   
+    "RAID控制扣卡连接器": "RAID控制扣卡连接器。",
+    "后置硬盘背板2电源连接器": "后置硬盘背板电源连接器。",
+    "iBMC插卡": "iBMC插卡。",
+    "灵活IO卡1连接器": "灵活IO卡连接器。",
+    "Riser卡插槽1":"Riser卡插槽。",
+    "后置硬盘背板1电源连接器":"后置硬盘背板电源连接器。",
+    "M.2连接器（预留）": "M.2连接器（预留）。",
+    "风扇连接器":"风扇连接器。",
+    "前置硬盘背板低速信号连接器":"前置硬盘背板低速信号连接器。",
+    "前置硬盘背板电源信号连接器":"前置硬盘背板电源信号连接器。",
+    "电源连接器":"电源连接器。",
+
+    "RAID控制扣卡连接器.title": "RAID控制扣卡连接器。",
+    "后置硬盘背板2电源连接器.title": "后置硬盘背板电源连接器。",
+    "iBMC插卡.title": "iBMC插卡。",
+    "灵活IO卡1连接器.title": "灵活IO卡连接器。",
+    "Riser卡插槽1.title":"Riser卡插槽。",
+    "后置硬盘背板1电源连接器.title":"后置硬盘背板电源连接器。",
+    "M.2连接器（预留）.title": "M.2连接器（预留）。",
+    "风扇连接器.title":"风扇连接器。",
+    "前置硬盘背板低速信号连接器.title":"前置硬盘背板低速信号连接器。",
+    "前置硬盘背板电源信号连接器.title":"前置硬盘背板电源信号连接器。",
+    "电源连接器.title":"电源连接器。"
+
+    
+}

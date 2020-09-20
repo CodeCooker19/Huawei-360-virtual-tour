@@ -1,0 +1,63 @@
+{    
+    "lang": "中文",
+    "header.nav1": "原始视图",
+    "header.nav2": "爆炸视图",
+    "header.nav3": "拆卸部件",
+    "header.nav4": "产品规格",
+    "header.nav5": "反馈",
+    "header.nav8":"返回",
+    "topTip8":"返回首页",
+    "main.title": "华为 Atlas 800",
+    "main.text": "华为Atlas 800深度学习系统，面向AI开发者和数据科学家，通过软硬件一体式交付，提供数据标注、模型生成、模型训练、模型推理服务部署的端到端能力，降低使用AI的技术门槛，让客户更聚焦业务本身，使AI业务能快速开发与上线。",
+
+    "leftMenu1": "部件",
+    "leftMenu2": "更多资源",
+
+    "leftMenu1.item1": "机箱",
+    "leftMenu1.item2": "管理模块",
+    "leftMenu1.item3": "Pcie",
+    "leftMenu1.item4": "IO",
+    "leftMenu1.item5": "硬盘",
+    "leftMenu1.item6": "电源",
+    "leftMenu1.item7": "风扇",
+    "leftMenu1.item8": "GP608节点",
+    "leftMenu1.item9": "G560节点",
+ 
+    "leftMenu1.item11": "隐藏未选中",
+    "leftMenu1.item12": "显示全部",
+
+    "leftMenu2.item1": "用户指南",
+    "leftMenu2.item2": "工具",
+    "leftMenu2.item3": "硬件拆装视频",
+   "leftMenu2.item4": "软件",
+	"leftMenu2.item5": "成功案例",
+    "more": "3D视频>>",
+    
+
+    "bottomTip1": "选中后，移动鼠标旋转模型",
+    "bottomTip2": "选中后，移动鼠标移动模型",
+    "bottomTip3": "选中后，移动鼠标缩放模型",
+    "bottomTip4": "显示/隐藏标签",
+    "bottomTip5": "分享二维码",
+
+    "topTip1": "恢复原始视图",
+    "topTip2": "展示爆炸视图",
+    "topTip3": "移动部件",
+    "topTip4": "展示产品规格",
+    "topTip5": "邮件反馈",
+    
+    "gp608_node.title": "GP608节点",
+    "g560v5.title": "G560节点",
+    "power_node.title": "电源",
+    "manage_node.title": "管理模块",
+    "fan_node.title":"风扇",
+    "io_node.title":"IO模块",
+
+    "gp608_node": "GP608节点",
+    "g560v5": "G560节点",
+    "power_node": "4个热插拔2200W AC或240V HVDC电源模块，支持N+N工作模式",
+    "manage_node": "管理模块",
+    "fan_node":"6个热插拔风扇，支持N+1冗余",
+    "io_node":"4*PCIe x16 LP+2*10GE LOM"
+    
+}

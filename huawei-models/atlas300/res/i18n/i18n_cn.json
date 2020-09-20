@@ -1,0 +1,52 @@
+{    
+    "lang": "中文",
+    "header.nav1": "原始视图",
+    "header.nav2": "爆炸视图",
+    "header.nav3": "拆卸部件",
+    "header.nav4": "产品规格",
+    "header.nav5": "反馈",
+    "header.nav8":"返回",
+    "topTip8":"返回首页",
+    "main.title": "Atlas 300 AI加速卡",
+    "main.text": "基于Ascend 310人工智能处理器，Atlas 300 AI加速卡以标准的半高半长PCIe卡的产品形态，提供多种数据精度，适用于人工智能训练和推理场景（主要是推理）。Atlas 300 AI加速卡采用全新的DaVinci架构，提供业界领先的性能与能效比，可广泛应用于数据中心和智能边缘。<br /><b>超强算力</b><br />单卡提供64 TOPS INT8算力及64路高清视频实时分析，为深度学习和推理提供更强大算力<br /><b>硬件编解码</b><br />支持JPEG和视频硬件编解码，提升图片和视频类应用性能<br /><b>低时延</b><br />内存容量大、带宽高，满足特征匹配场景内存需求，降低应用时延",
+
+    "leftMenu1": "部件",
+    "leftMenu2": "更多资源",
+
+    "leftMenu1.item1": "外壳",
+  
+    "leftMenu1.item2": "主板",
+    "leftMenu1.item3": "M.2固态硬盘",
+  
+    "leftMenu1.item11": "隐藏未选中",
+    "leftMenu1.item12": "显示全部",
+
+    "leftMenu2.item1": "用户指南",
+    "leftMenu2.item2": "工具",
+    "leftMenu2.item3": "多媒体",
+   "leftMenu2.item4": "软件",
+	"leftMenu2.item5": "成功案例",
+    "more": "3D视频>>",
+    
+
+    "bottomTip1": "选中后，移动鼠标旋转模型",
+    "bottomTip2": "选中后，移动鼠标移动模型",
+    "bottomTip3": "选中后，移动鼠标缩放模型",
+    "bottomTip4": "显示/隐藏标签",
+    "bottomTip5": "分享二维码",
+
+    "topTip1": "恢复原始视图",
+    "topTip2": "展示爆炸视图",
+    "topTip3": "移动部件",
+    "topTip4": "展示产品规格",
+    "topTip5": "邮件反馈",
+    
+    "info": "·64TOPS INT8 @ 75W</br>·64路高清视频实时分析，支持JPEG解码</br>·32GB内存  |  204.8GB/s内存带宽</br>·PCIe 3.0 x16，半高半长卡",
+
+    
+
+    "info.title":"产品信息"
+
+ 
+    
+}

@@ -1,0 +1,107 @@
+/* #Navication-bar class with media responsive*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575px) and (orientation:portrait) {
+    #navigation-bar {
+        padding: 0 0 0rem 0rem;
+        height: auto;
+        width: 70%;
+        position: absolute;
+        bottom: -4rem;
+        left: 0%;
+        font-family: 'exo';
+        margin: auto;
+        left: 0px;
+        right: 0px; 
+    }     
+}
+/* Extra small devices (landscape phones, less than 576px) */
+@media screen and (max-width: 575px) and (orientation:landscape) {
+    #navigation-bar {
+        padding: 0 0 0rem 0rem;
+        height: auto;
+        width: 40%;
+        position: absolute;
+        bottom: -4rem;
+        left: 0%;
+        font-family: 'exo';
+        margin: auto;
+        left: 0px;
+        right: 0px; 
+    }     
+}
+
+/* Small devices (portrait phones, 576px and up)*/
+@media screen and (min-width: 576px) and (max-width: 767px) and (orientation:portrait) { 
+    #navigation-bar {
+        padding: 0 0 0rem 0rem;
+        height: auto;
+        width: 50%;
+        position: absolute;
+        bottom: -4rem;
+        left: 0%;
+        font-family: 'exo';
+        margin: auto;
+        left: 0px;
+        right: 0px;
+    }    
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media screen and (min-width: 576px) and (max-width: 767px)  and (orientation:landscape) { 
+    #navigation-bar {
+        padding: 0 0 0rem 0rem;
+        height: auto;
+        width: 40%;
+        position: absolute;
+        bottom: -4rem;
+        left: 0%;
+        font-family: 'exo';
+        margin: auto;
+        left: 0px;
+        right: 0px; 
+    }    
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media screen and (min-width: 768px) and (max-width: 1199px) and (orientation:portrait) {
+    #navigation-bar {
+        padding: 0 0 0rem 0rem;
+        height: auto;
+        width: 40%;
+        position: absolute;
+        bottom: -4rem;
+        left: 0%;
+        font-family: 'exo';
+        margin: auto;
+        left: 0px;
+        right: 0px;
+    }    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) and (orientation:landscape) {
+    #navigation-bar {
+        padding: 0 0 0rem 0rem;
+        height: auto;
+        width: 30%;
+        position: absolute;
+        bottom: -4rem;
+        left: 0%;
+        font-family: 'exo';
+        margin: auto;
+        left: 0px;
+        right: 0px;
+    }    
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) { 
+    #navigation-bar {
+        padding: 0 0 0rem 5rem;
+        height: 5rem;
+        width: 25rem;
+        position: absolute;
+        bottom: 3rem;
+        left: 0%;
+        font-family: 'exo';
+    }
+}

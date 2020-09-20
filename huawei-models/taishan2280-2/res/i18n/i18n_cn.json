@@ -1,0 +1,78 @@
+{    
+    "lang": "中文",
+    "header.nav1": "原始视图",
+    "header.nav2": "爆炸视图",
+    "header.nav3": "拆卸部件",
+    "header.nav4": "产品规格",
+    "header.nav5": "反馈",
+    "header.nav8":"返回",
+    "topTip8":"返回首页",
+    "main.title": "2280 均衡型服务器",
+    "main.text": "2280 均衡型服务器是基于华为鲲鹏920处理器的2U2路均衡型服务器，系统最高能够提供128核、2.6GHz主频的计算能力和最多28个NVMe SSD硬盘。",
+
+    "leftMenu1": "部件",
+    "leftMenu2": "更多资源",
+
+    "leftMenu1.item1": "机箱",
+    "leftMenu1.item2": "机箱盖",
+    "leftMenu1.item3": "导风罩",
+    "leftMenu1.item4": "散热器",
+    "leftMenu1.item5": "Raid卡",
+    "leftMenu1.item6": "TPM扣卡",
+    "leftMenu1.item7": "硬盘",
+    "leftMenu1.item8": "内存",
+    "leftMenu1.item9": "主板",
+    "leftMenu1.item10": "电源",
+    "leftMenu1.item13": "CPU",
+    "leftMenu1.item14": "风扇",
+    "leftMenu1.item15": "灵活IO卡",
+    "leftMenu1.item16": "Riser模组",
+    "leftMenu1.item11": "隐藏未选中",
+    "leftMenu1.item12": "显示全部",
+
+    "leftMenu2.item1": "用户指南",
+    "leftMenu2.item2": "工具",
+    "leftMenu2.item3": "多媒体",
+   "leftMenu2.item4": "软件",
+	"leftMenu2.item5": "成功案例",
+    "more": "3D视频>>",
+    
+
+    "bottomTip1": "选中后，移动鼠标旋转模型",
+    "bottomTip2": "选中后，移动鼠标移动模型",
+    "bottomTip3": "选中后，移动鼠标缩放模型",
+    "bottomTip4": "显示/隐藏标签",
+    "bottomTip5": "分享二维码",
+
+    "topTip1": "恢复原始视图",
+    "topTip2": "展示爆炸视图",
+    "topTip3": "移动部件",
+    "topTip4": "展示产品规格",
+    "topTip5": "邮件反馈",
+    
+   
+    "disk_node": "最多16个3.5英寸或27个2.5英寸SAS/SATA/SSD硬盘，或16个2.5英寸NVMeSSD硬盘",
+    "cpu_node": "2*鲲鹏920 5220或3210",
+    "dimm_node": "16个DDR4-2933插槽",
+    "raid_node":"支持RAID 0, 1, 5, 6, 10, 50, 60，支持超级电容掉电保护</br>* TaiShan X6000 XA320 V2液冷服务器仅支持RAID 0,1",
+    "pcie_node":"最多8个PCIe 4.0x8或3个PCIe 4.0x16+2个PCIex8插槽",
+    "boardnic_node":"2个板载网络插卡，最多支持8*GE电口或者8*25GE/10GE光口或者4*GE电口+4*25GE/10GE光口",
+    "power_node":"2个热插拔1500W或2000W交流电源模块，支持1+1冗余",
+    "fan_node":"支持4个热拔插风扇模组，支持N+1冗余",
+    "chassis_node":"447 mm*790 mm*86.1 mm",
+    "ibmc_node":"iBMC插卡",
+    
+    "disk_node.title":"本地存储",
+    "cpu_node.title":"处理器型号",
+    "dimm_node.title":"内存",
+    "raid_node.title":"RAID支持",
+    "pcie_node.title":"PCIe扩展",
+    "boardnic_node.title":"板载网络",
+    "power_node.title":"电源",
+    "fan_node.title":"风扇",
+    "chassis_node.title":"尺寸(宽x深x高)",
+    "ibmc_node.title":"iBMC插卡",
+    "special":"鲲鹏920"
+
+    
+}

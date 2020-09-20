@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>计算产品3D展示</title>
+        <meta charset="utf-8">
+        <script>var version=(new Date()).getTime()</script>
+        <link href="../common/css/bootstrap.min.css?v=1554363265726" rel="stylesheet">
+		<script src="../common/js/jquery-2.2.1.min.js?v=1554363265726"></script>
+		<script src="../common/js/jquery.i18n.min.js?v=1554363265726"></script>
+        <script src="../common/js/bootstrap.min.js?v=1554363265726"></script>
+<script src="../common/js/init.js?v=1554363265726"></script>
+        <link type="image/x-icon" href="../common/images/favicon.ico" rel="icon">
+        <!--[if lt IE 9]>
+        <script src="res/js/html5shiv.3.7.2.min.js?v=1554363265726"></script>
+        <script src="res/js/respond.1.4.2.min.js?v=1554363265726"></script>
+        <![endif]-->
+        <!--Web3D -->
+		<link href="../common/css/web3d.css?v=1554363265726" rel="stylesheet"> 
+		<script>
+		var nodeColor=[1,1,1,0.5,1,1];   //修改玩vmtld源码，传入nodeColor以改变选中时的颜色
+		</script> 
+        <script type="text/javascript" src="../common/js/ivsys.js?v=1554363265726"></script><script type="text/javascript" src="../common/js/ivmatrix3d.js?v=1554363265726"></script>
+        <script type="text/javascript" src="../common/js/ivwindow3d.js?v=1554363265726"></script><script type="text/javascript" src="../common/js/ivspace3d.js?v=1554363265726"></script>
+        <script type="text/javascript" src="../common/js/ivmtl3d.js?v=1554363265726"></script><script type="text/javascript" src="../common/js/ivmesh3d.js?v=1554363265726"></script>
+		<script type="text/javascript" src="../common/js/ivnode3d.js?v=1554363265726"></script><script type="text/javascript" src="../common/js/ivhittest.js?v=1554363265726"></script>
+		<script type="text/javascript" src="../common/js/ivhotspot.js?v=1554363265726"></script>
+        <script type="text/javascript" src="../common/js/ivtreeview.js?v=1554363265726"></script><script type="text/javascript" src="../common/js/ivedit3d.js?v=1554363265726"></script>
+		<script type="text/javascript" src="../common/js/ivhandler.js?v=1554363265726"></script>
+		<script src="../common/js/index.js?v=1554363265726"></script>
+		<script src="../common/js/jquery.qrcode.min.js?v=1554363265726"></script>
+        <script>
+        function ivResizeCanvas(cnv)
+        {
+          var r=cnv.getBoundingClientRect();
+          var width = document.body.clientWidth;//window.innerWidth;    
+          var height = document.documentElement.clientHeight - document.getElementsByClassName('navbar-fixed-top')[0].offsetHeight;
+          width--;  
+         if(view3d)
+            view3d.setViewSize(width,height);
+          else {cnv.width=width;cnv.height = height;}
+         $('#bottom_icon').css({
+            width:'auto',
+         })
+         $('#bottom_icon').css({
+            left:($('body').width()-$('#bottom_icon').width())/2+'px'
+         })
+		          document.getElementById("top_icon").setAttribute('style','margin-left:'+(width/2 - 250 -300) + "px");   
+		  if(width>=766 && width<=991){
+			document.getElementById("top_icon_xs").setAttribute('style','margin-left:'+(width/3 -160) + "px");  
+		  }else{
+			document.getElementById("top_icon_xs").setAttribute('style','margin-left:'+(width/2 -140) + "px");
+		  }
+		 $('.clearfix').css({'marginTop':$("#topNavbar").height()})
+        }
+        </script>
+        <!--Web3D -->
+
+		<script type="text/javascript">
+			var move_flag = 0;
+			var tip_flag = 0;
+			function bottom_rotate () {
+				document.getElementById("boomlicon1").setAttribute('style','background-color: #000000;background-image: url("../common/images/rotate-white.png?v=1554363265726");');
+				document.getElementById("boomlicon2").setAttribute('style','background-color: #FFFFFF;background-image: url("../common/images/move.png?v=1554363265726");');
+				document.getElementById("boomlicon3").setAttribute('style','background-color: #FFFFFF;background-image: url("../common/images/zoomin.png?v=1554363265726");');
+				ivSetVPMode("rotate");
+			}
+			function bottom_move () {
+				document.getElementById("boomlicon1").setAttribute('style','background-color: #FFFFFF;background-image: url("../common/images/rotate.png?v=1554363265726");');
+				document.getElementById("boomlicon2").setAttribute('style','background-color: #000000;background-image: url("../common/images/move-white.png?v=1554363265726");');
+				document.getElementById("boomlicon3").setAttribute('style','background-color: #FFFFFF;background-image: url("../common/images/zoomin.png?v=1554363265726");');
+				ivSetVPMode("pan");				
+			}
+			function bottom_zoom () {
+				document.getElementById("boomlicon1").setAttribute('style','background-color: #FFFFFF;background-image: url("../common/images/rotate.png?v=1554363265726");');
+				document.getElementById("boomlicon2").setAttribute('style','background-color: #FFFFFF;background-image: url("../common/images/move.png?v=1554363265726");');
+				document.getElementById("boomlicon3").setAttribute('style','background-color: #000000;background-image: url("../common/images/zoomin-white.png?v=1554363265726");');
+				ivSetVPMode("zoom");				
+			}
+			function bottom_tips () {
+				if(tip_flag == 0){
+					showOrHideMark(0,'Markup Layer')
+					document.getElementById("boomlicon4").setAttribute('style','background-color: #FFFFFF;background-image: url("../common/images/zoomout.png?v=1554363265726");');
+					document.getElementById("top_tips").setAttribute('style','position:absolute;left:48px;top:42px;width: 335px;visibility:hidden;');
+					tip_flag = 1;
+				}
+				else{
+					if(move_flag !=1){showOrHideMark(1,'Markup Layer')}
+					document.getElementById("boomlicon4").setAttribute('style','background-color: #000000;background-image: url("../common/images/zoomout-white.png?v=1554363265726");');
+					document.getElementById("top_tips").setAttribute('style','position:absolute;left:48px;top:42px;width: 335px;');
+					tip_flag = 0;
+				}
+				
+			}
+		var marks =['gp608_node','g560v5','power_node','manage_node','fan_node','io_node']
+		function showOrHideMark(state,node){    //控制点的显示隐藏
+		  switch (node){
+			  case 'Markup Layer':{
+				for(let i=0;i<marks.length;i++){
+					view3d.searchNode(marks[i]).show(state);
+				 }
+				
+				break;
+			  }
+			  
+			  case "g560":{
+				view3d.searchNode('g560v5').show(state);
+				break;
+			  }
+			  case "gp608":{
+				view3d.searchNode('gp608_node').show(state);
+				break;
+			  }
+			  case "manage":{
+				view3d.searchNode('manage_node').show(state);
+				break;
+			  }
+			  case "power":{
+				view3d.searchNode('power_node').show(state);
+				break;
+			  }
+			  case "io":{
+				view3d.searchNode('io_node').show(state);
+				break;
+			  }
+		   }
+		this.view3d.invalidate();
+		}
+		function initmove(){}
+		$(function () { 
+			$("[data-toggle='popover']").popover({
+				trigger:'hover',
+				html:true,
+			});
+		});
+		$(function () { $("[data-toggle='tooltip']").tooltip(); });
+	
+   		</script>
+		<script>
+			var langJson = '';
+			var defaultLang = "cn";
+			var itemName = 'classis';
+			var moreHref = {
+				cn:'https://support.huawei.com/enterprise/zh/servers/atlas-pid-22368564/multimedia',
+				en:'#https://support.huawei.com/enterprise/en/servers/atlas-pid-22368564/multimedia'
+			};
+					
+			var Specifications = {
+				cn:'https://e.huawei.com/cn/products/cloud-computing-dc/servers/g-series/atlas-800-ai',
+				en:'https://e.huawei.com/en/products/cloud-computing-dc/servers/g-series/atlas-800-ai'
+			};
+			var tools = {
+				cn:'https://support.huawei.com/enterprise/zh/servers/atlas-pid-22368564/tool',
+				en:'https://support.huawei.com/enterprise/en/servers/atlas-pid-22368564/tool'
+			};
+			var userguide = {
+				cn:'#',
+				en:'#'
+			};
+			var software={
+				cn:'https://support.huawei.com/enterprise/zh/servers/atlas-pid-22368564/software',
+				en:'https://support.huawei.com/enterprise/en/servers/atlas-pid-22368564/software'
+			};
+		
+		</script>
+			<script src="../common/js/lang.js?v=1554363265726"></script>
+			<script>
+			
+			var itemIndex = '#blankRadio1';
+					function change_node_name(node)
+					 {   
+						if(nodeColor[1]==1 && nodeColor[2]==1){return false;}
+						if(node == null)
+						{    itemName = 'classis'
+							 itemIndex=''
+						    // document.getElementById("top_tips").innerHTML='<p style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['main.text']+'<br /><a class="moreHref" href="" target="_blank" style="float:right;font-size: 14px;color:#E41E2B;text-decoration: none;">'+langJson['more']+'</a></p>';
+						}
+						else
+						{   
+							if(node.name == "chassis")
+							{	
+								// document.getElementById("top_tips").innerHTML='<p id="top_title" style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['leftMenu1.item2']+'</p>';
+								itemIndex = '#blankRadio1'
+								itemName = 'leftMenu1.item1'
+							}
+							if(node.name == "manage")
+							{	
+								// document.getElementById("top_tips").innerHTML='<p style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['main.text']+'<br /><a class="moreHref" href="" target="_blank" style="float:right;font-size: 14px;color:#E41E2B;text-decoration: none;">'+langJson['more']+'</a></p>';
+								// $(".moreHref").attr('href',moreHref[defaultLang]);
+								itemIndex = '#blankRadio2'
+								itemName = 'classis'
+							}
+							if(node.name == "pcie")
+							{	
+								// document.getElementById("top_tips").innerHTML='<p id="top_title"  style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['leftMenu1.item3']+'</p>';
+								itemIndex = '#blankRadio3'
+								itemName = 'leftMenu1.item3'
+							}
+							if(node.name == "io")
+							{	
+								// document.getElementById("top_tips").innerHTML='<p id="top_title"  style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['leftMenu1.item3']+'</p>';
+								itemIndex = '#blankRadio4'
+								itemName = 'leftMenu1.item4'
+							}
+							if(node.name == "disk")
+							{	
+								// document.getElementById("top_tips").innerHTML='<p id="top_title"  style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['leftMenu1.item3']+'</p>';
+								itemIndex = '#blankRadio5'
+								itemName = 'leftMenu1.item5'
+							}
+							if(node.name == "power")
+							{	
+								// document.getElementById("top_tips").innerHTML='<p id="top_title"  style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['leftMenu1.item3']+'</p>';
+								itemIndex = '#blankRadio6'
+								itemName = 'leftMenu1.item6'
+							}
+							if(node.name == "fan")
+							{	
+								// document.getElementById("top_tips").innerHTML='<p id="top_title"  style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['leftMenu1.item3']+'</p>';
+								itemIndex = '#blankRadio7'
+								itemName = 'leftMenu1.item7'
+							}
+							if(node.name == "gp608")
+							{	
+								// document.getElementById("top_tips").innerHTML='<p id="top_title"  style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['leftMenu1.item3']+'</p>';
+								itemIndex = '#blankRadio8'
+								itemName = 'leftMenu1.item8'
+							}
+							if(node.name == "g560")
+							{	
+								// document.getElementById("top_tips").innerHTML='<p id="top_title"  style="font-size: 24px;color: #333333;"><b>'+langJson['main.title']+'</b></p><p style="font-size: 16px;color:#333333;">'+langJson['leftMenu1.item3']+'</p>';
+								itemIndex = '#blankRadio9'
+								itemName = 'leftMenu1.item9'
+							}
+							
+						}
+						
+						$.each($("#menu-item-box1>.menu-item>input"),function(i,item){   //选中组件是添加红线
+							$(item).parent().removeClass("active")
+							   })
+						$(itemIndex).parent().addClass("active")
+					  }
+					</script>
+					
+    </head>
+    
+    <body style="background-color:#f5f5f5;font-family:微软雅黑,Arial" onload="iv.initEditor3d('./tree.json','./res/model/');click_component();iv.setAxis('y')">
+        <!--header starts -->
+            <div class="container clear"  >
+              <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="topNavbar" style="background-color: #f8f8f8;border-color:#f8f8f8;z-index:1">
+               <div class="navbar-header hidden-xs" >
+               <a class="navbar-brand " href="javascript:void(0)" onclick="view3d.setDefView(iv.VIEW_TRANSITION);"><p style="float:right;color:#333;margin-left:15px;" class="hidden-sm hidden-sm">Atlas 800</p><img src="../common/images/logo_new.png?v=1554363265726" id="logo1"></a>
+               </div>
+               <div class="nav navbar-nav hidden-md hidden-lg " id="top_icon_xs"> 
+                    <div href="javascript:void(0)" id="top_icon_1_xs" i18n="header.nav1" onclick="originView();" class="active">原始视图</div>
+                    <div href="javascript:void(0)" id="top_icon_2_xs" i18n="header.nav2" onclick="boomView();">爆炸视图</div>
+                    <div href="javascript:void(0)" id="top_icon_3_xs" i18n="header.nav3" onclick="initmove();">拆卸部件</div>
+                    </div>
+                <ul class="nav navbar-nav hidden-xs hidden-sm" id="top_icon"> 
+                	<li><a href="javascript:void(0)" id="top_icon_1"  i18n="header.nav1" onclick="originView()" data-toggle="tooltip" data-placement="bottom" class="i18n active" i18nkey="topTip1" title="恢复原始视图的动画"><span></span>原始视图</a></li>
+                    <li><a href="javascript:void(0)" id="top_icon_2" i18n="header.nav2" onclick="boomView();" data-toggle="tooltip" data-placement="bottom" class="i18n" i18nkey="topTip2" title="展示爆炸视图的动画"><span></span>爆炸视图</a></li>
+                    <li><a href="javascript:void(0)" id="top_icon_3" i18n="header.nav3" onclick="initmove();" data-toggle="tooltip" data-placement="bottom" class="i18n" i18nkey="topTip3" title="显示/取消移动部件的功能"><span></span>拆卸部件</a></li>
+                    <li>
+                    	<a id="top_icon_4"  i18n="header.nav4"  href='https://e.huawei.com/cn/products/cloud-computing-dc/servers/g-series/atlas-800-ai' target="_blank" data-toggle="tooltip" data-placement="bottom" class="i18n" i18nkey="topTip4" title="展示产品规格"><span></span>产品规格
+                           <!--  <div class="nav-tip-help"></div>-->
+                        </a>
+                    </li>
+                    <li><a href="mailto:infoit@huawei.com" id="top_icon_5" i18n="header.nav5" data-toggle="tooltip" data-placement="bottom" class="i18n" i18nkey="topTip5" title="邮件反馈">反馈</a></li>
+                    <li><a  id="top_icon_8" i18n="header.nav8" href=""  data-toggle="tooltip" data-placement="bottom" class="i18n" i18nkey="topTip8" title="返回首页">返回</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-xs"> 
+                    <li class="dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#333;font-size:12pt;background-color: #f8f8f8;margin-right:5px;">
+							 <div id="top_icon_6"></div>
+							 <span class="lang" i18n='lang'>中文</span>
+                         	<div id="top_icon_7"></div>
+                         </a>
+                        <ul class="dropdown-menu" id="langList" style="min-width: 84px;position: absolute;right: 14px;padding: 0 0 ;margin-top: 10px;">
+                            
+                            <li>
+                                 <a href="#" data-lang="cn">中文</a>
+                            </li>
+                            <li>
+                                 <a href="#"  data-lang="en">English</a>
+                            </li>
+<!--                             <li>
+                                 <a href="#"  data-lang="jp">日本語</a>
+                            </li>
+                            <li>
+                                 <a href="#"  data-lang="ru">Pусский</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                </ul>
+              </div>
+            </div>   
+		<!--header ends-->  
+		<!--content starts --> 
+    <div class="row clearfix" style="margin-top:67px;margin: 0px">
+		<div class="col-md-12 column" style="position:relative;padding: 0px">
+            <canvas id="ivwindow3d" class="ivcanvas3d"></canvas>
+            <div id="top_tips" style="position:absolute;left:48px;top:42px;width: 335px;">
+                <p style="font-size: 24px;color: #333333;font-weight:bold;" i18n="main.title" >.</p>
+                <p style="font-size: 16px;color:#333333;" i18n="main.text">.</p>
+				<!-- <a href="http://support.huawei.com/enterprise/zh/doc/EDOC1100002168" target="_blank" class="moreHref" href="javascript:void;" i18n="more" style="float:right;font-size: 14px;color:#E41E2B;text-decoration: none;">3D视频 >></a> -->
+            </div>
+            <div id="bottom_icon" style="position:absolute;bottom:50px;width:340px;">
+            	<span id="boomlicon1" onclick="bottom_rotate();" data-toggle="tooltip" data-placement="top" class="i18n" i18nkey="bottomTip1" title="选中后，移动鼠标旋转模型"></span>
+            	<span id="boomlicon2" onclick="bottom_move();" data-toggle="tooltip" data-placement="top" class="i18n" i18nkey="bottomTip2" title="选中后，移动鼠标移动模型"></span>
+            	<span id="boomlicon3" onclick="bottom_zoom ()" data-toggle="tooltip" data-placement="top" class="i18n" i18nkey="bottomTip3" title="选中后，移动鼠标缩放模型"></span>
+            	<span id="boomlicon4" onclick="bottom_tips()" data-toggle="tooltip" data-placement="top" class="i18n" i18nkey="bottomTip4" title="显示/隐藏标签"></span>
+				<span id="boomlicon5"  class="i18n hidden-xs" i18nkey="bottomTip5"   title="分享二维码" >
+				   <div class='qr-container'>
+				     <div class='qr-title' i18n="bottomTip5">分享二维码</div>
+					 <div class='qrcode'></div> 
+				   </div>
+				</span>
+				<span id="boomlicon5"    class="hidden-lg hidden-md hidden-sm" onclick="$('#myModal').modal('show')"></span>
+			
+			</div>
+        </div>
+        <div class="col-md-2 column" style="height: 0px;width: 0;padding: 0;min-height: 0;overflow: hidden;">
+            <div class="tree-view" id="treeview" style="background-color:#EEEEEE ;display: none" ></div>
+            <span id="view3d-axis-y" onclick='iv.setAxis("y");' title="Y Axis" style="display: none">Y</span> 
+        </div> 
+    </div> 
+		<!--content ends -->  
+		<!-- left menu start -->
+		<img class='menu-icon' src="../common/images/left_menu.png?v=1554363265726" />
+		<div class="left-menu-container hidden-xs">
+			<div class="left-menu hidden-xs">
+				<div class="left-menu-head">
+					<img id='closeMenu' src="../common/images/left_menu.png?v=1554363265726" />
+					<span>Atlas 800</span>
+				</div>
+				<div class="menu-node" id="menu-node1">
+					<img class="icon-3d" src="../common/images/3d.png?v=1554363265726">
+					<span i18n="leftMenu1">部件</span>
+					<img class="icon-jia" id="node-icon1" src="../common/images/jian.png?v=1554363265726">
+				</div>
+				<ul class="menu-item-box active" id="menu-item-box1">
+					<li class="menu-item-last">
+						<!-- <input type="radio" name="ctrRadio" id="hide" value="hide" >
+						<label for='hide' i18n="leftMenu1.item11">隐藏未选中</label> -->
+						<input type="radio" name="ctrRadio" id="show" value="show" checked="checked" >
+						<label for='show' i18n="leftMenu1.item12">显示全部</label>
+					</li>
+					<li class="menu-item">
+						
+						<label for="blankRadio1"></label>
+						<img src="../common/images/node.png?v=1554363265726" />
+						<span i18n="leftMenu1.item1">机箱</span>
+						<input type="radio" name="" checked="checked" id="blankRadio1" value="chassis" >
+						
+					</li>
+					<li class="menu-item">
+						<label for="blankRadio2"></label>
+						<img src="../common/images/node.png?v=1554363265726" />
+						<span i18n="leftMenu1.item2">管理模块</span>
+						<input type="radio" name="cover" checked="checked" id="blankRadio2" value="manage" >
+					</li>
+					<li class="menu-item">
+						<label for="blankRadio3"></label>
+						<img src="../common/images/node.png?v=1554363265726" />
+						<span i18n="leftMenu1.item3">pcie</span>
+						<input type="radio" name="" checked="checked" id="blankRadio3" value="pcie" >
+					</li>
+					<li class="menu-item">
+						<label for="blankRadio4"></label>
+						<img src="../common/images/node.png?v=1554363265726" />
+						<span i18n="leftMenu1.item4">io</span>
+						<input type="radio" name="" checked="checked" id="blankRadio4" value="io" >
+					</li>
+					<li class="menu-item">
+						<label for="blankRadio5"></label>
+						<img src="../common/images/node.png?v=1554363265726" />
+						<span i18n="leftMenu1.item5">硬盘</span>
+						<input type="radio" name="" checked="checked" id="blankRadio5" value="disk" >
+					</li>
+					<li class="menu-item">
+						<label for="blankRadio6"></label>
+						<img src="../common/images/node.png?v=1554363265726" />
+						<span i18n="leftMenu1.item6">电源</span>
+						<input type="radio" name="" checked="checked" id="blankRadio6" value="power" >
+					</li>
+					<li class="menu-item">
+						<label for="blankRadio7"></label>
+						<img src="../common/images/node.png?v=1554363265726" />
+						<span i18n="leftMenu1.item7">风扇</span>
+						<input type="radio" name="" checked="checked" id="blankRadio7" value="fan" >
+					</li>
+					
+					<li class="menu-item">
+						<label for="blankRadio8"></label>
+						<img src="../common/images/node.png?v=1554363265726" />
+						<span i18n="leftMenu1.item8">GP608节点</span>
+						<input type="radio" name="" checked="checked" id="blankRadio8" value="gp608" >
+					</li>
+					<li class="menu-item">
+						<label for="blankRadio9"></label>
+						<img src="../common/images/node.png?v=1554363265726" />
+						<span i18n="leftMenu1.item9">G560节点</span>
+						<input type="radio" name="" checked="checked" id="blankRadio9" value="g560" >
+					</li>
+				</ul>
+				<div class="menu-node" id="menu-node2">
+					<img class="icon-3d" src="../common/images/3d.png?v=1554363265726">
+					<span i18n="leftMenu2">更多资源</span>
+					<img class="icon-jia" id="node-icon2" src="../common/images/jian.png?v=1554363265726">
+				</div>
+				<ul class="menu-item-box box2 active" id="menu-item-box2">
+					<li class="menu-item" >
+						<img src="../common/images/docu.png?v=1554363265726" />
+						<a  href="http://support.huawei.com/enterprise/zh/doc/DOC1000163544" target="_blank" class="userguide"><span i18n="leftMenu2.item1">用户指南</span></a>
+					</li>
+					<li class="menu-item">
+						<img src="../common/images/docu.png?v=1554363265726" />
+						<a  href="https://support.huawei.com/enterprise/zh/servers/atlas-pid-22368564/tool" target="_blank" class="tools"><span i18n="leftMenu2.item2">工具</span></a>
+					</li>
+					<!-- <li class="menu-item">
+						<img src="../common/images/media.png?v=1554363265726" />
+						<a href="#" target="_blank" class="moreHref"><span i18n="leftMenu2.item3">硬件拆装视频</span></a>
+					</li> -->
+					<li class="menu-item" >
+						<img src="../common/images/serve.png?v=1554363265726" />
+						<a  href="https://support.huawei.com/enterprise/zh/servers/atlas-pid-22368564/software" target="_blank" class="software"><span i18n="leftMenu2.item4">软件</span></a>
+					</li>
+					<li class="menu-item" style="border: none">
+						<img src="../common/images/docu.png?v=1554363265726" />
+						<a  href="https://e.huawei.com/cn/case-studies?product=storage" target="_blank" class="stories"><span i18n="leftMenu2.item5">成功案例</span></a>
+					</li>
+				</ul>
+			</div>
+	   </div>
+		<!-- left menu end -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="body" style="height: 100%; display:flex; justify-content: center;align-items: center" onclick="$('#myModal').modal('hide')">
+				<div>
+					<div class='qrcode' style="display: inline-block;"></div>
+					<p style="text-align: center;color: white;margin-top: 3vh" i18n="bottomTip5">分享二维码</p>
+				</div>
+				
+			</div>
+		</div>
+		<div class="modal fade" id="toastModal" tabindex="-1" role="dialog" >
+				<div class="modal-dialog" role="body" style="height: 100%; display:flex; justify-content: center;align-items: center" onclick="$('#toastModal').modal('hide')">
+					<div class="toastText"></div>
+				</div>
+		</div>
+		<!-- mouse left menu start -->
+		<div class="mouseMenu">
+			<ul>
+				<li id='menu1'>菜单一</li>
+				<li id='menu2' >菜单二</li>
+				<li id='menu2' >菜单三</li>
+			</ul>
+		</div>
+		<div class="infoBox">
+			
+			
+		</div>
+	</body>
+	<script src="../common/js/header.js?v=1554363265726"></script>
+	<script>
+		function showOrHideNode(state,index)//state 隐藏 0:隐藏，1：显示
+		 { 
+			var temp = view3d.searchNode(index);
+			var tempText='temp';
+			var n = 0;
+			if(index == 'chassis'){n=1;}
+			else if(index == 'manage' || index == 'io' || index == 'gp608'){n=2;}
+			else if(index == 'g560'){ n=3}
+			else if(index == 'pcie' || index == 'power'){ n=4}
+			else if(index == 'fan'){ n=6}
+			else if(index == 'disk'){n=16}
+		   
+			for(var i=0;i<n;i++){          
+				eval(tempText).show(state);
+				tempText+='.next'
+			}
+			this.view3d.invalidate();
+		}
+	</script>
+	<script src="../common/js/leftmenu.js?v=1554363265726"></script>
+	<script>
+		// 自定义右键菜单
+		function hideMenu(){
+			document.getElementsByClassName('mouseMenu')[0].style.display='none'
+		}
+		function menu1(){
+			hideMenu();
+		
+		};
+		function menu2(){
+			hideMenu();
+			
+		};
+		function menu3(){
+			hideMenu();
+			
+		};
+		// document.oncontextmenu = function(e){
+		//   if(e.target.id=='ivwindow3d'){
+			
+		// 	var oEvent =e || event;
+		// 	var mouseMenu = document.getElementsByClassName('mouseMenu')[0];
+		// 	mouseMenu.style.display='block';
+		// 	mouseMenu.style.left=oEvent.clientX+'px';
+		// 	mouseMenu.style.top=oEvent.clientY+'px';
+		// 	return false  
+		//   }
+		
+		// }
+		document.onclick = function(e){
+		switch (e.target.id){
+			 case 'menu1' : menu1();break;
+			 case 'menu1' : menu2();break;
+			 case 'menu1' : menu3();break;
+			 default: hideMenu();break;
+		 }
+		   
+		}
+	
+</script>
+<script>
+	var preNode = '';
+// hover显示详细信息 start
+function showInfo(x,y,nodeName){
+	
+	var html = "<div class='info-title'>"+langJson[nodeName+'.title']+"</div><p class='info-main'>"+langJson[nodeName]+"</p>";
+  $('.infoBox').html(html);
+  
+  var infoBox = document.getElementsByClassName('infoBox')[0];
+  var height = $('.infoBox').height();  //获取泡泡提示的高度
+  infoBox.style.display='block';
+  infoBox.style.left=(x-14)+'px';
+  infoBox.style.top=(y-	height+40)+'px';
+  $(".infoBox").animate({
+	  width:'214px',
+	  opacity:1,
+	},200)
+}
+function hideInfo(){
+  var infoBox = document.getElementsByClassName('infoBox')[0];
+  infoBox.style.left=-200+'px';
+  infoBox.style.top=-200+'px';
+ 	$(".infoBox").animate({
+	  width:'100px',
+	  opacity:0,
+	},100)
+	
+}
+function hoverNode(x,y){
+  var target = view3d.hitTest(x,y);
+  if(target == null) {
+	if(preNode == target) return; 
+	   preNode = null;
+	   hideInfo();
+	   return false;
+	}
+  else{
+	if(preNode == target.node.name) return; //如果在短时间hover同一个node则中断，优化性能
+	if(marks.indexOf(target.node.name)!=-1){
+	  for(var i=0;i<marks.length;i++){
+		if(marks[i]==target.node.name){
+			hideInfo();showInfo(x,y,marks[i]);
+		}
+	  }
+	}else{
+		hideInfo();
+	}
+	preNode = target.node.name;
+ }
+}
+
+// hover显示详细信息 end
+</script>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/staticpages.css">
+</head>
+
+<body>
+    <div id="introduction" class="introduction">
+        <img src="images/ui/Logos/huawei_logo.png" alt="huawei" class="introduction-logo">
+        <div class="introduction-card">
+            <img src="images/ui/Logos/ai_lab_logo.png" alt="logo" class="introduction-image">
+            <h1 class="introduction-title">Welcome to the AI·Lab Virtual Tour</h1>
+            <form class="form" onsubmit="event.preventDefault(); checkFormAndRedirect()" id="email-form">
+                <label for="email">Enter email</label>
+                <div class="input-content">
+                    <input id="email" placeholder="example@email.com" class="input-text" type="text" required
+                        name="email">
+                    <input class="btn" type="submit" value="ENTER">
+                </div>
+            </form>
+            <div class="error" id="error">Please enter a valid email!</div>
+        </div>
+        <div class="introduction-terms">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+    </div>
+
+    <div id="instructions" class="instructions" style="display: none">
+        <div class="model">
+            <div class="model-box">
+                <img src="images/ui/3d_model_view_placeholder.png" alt="3d-model" class="model-image">
+            </div>
+            <div class="rotate-content">
+                <img src="images/ui/icon_3d_rotate.png" alt="rotate" class="rotate-image">
+                <p>DRAG TO ROTATE</p>
+            </div>
+        </div>
+        <div class="instructions-cards">
+            <div class="instructions-card">
+                <h1 class="instructions-title margin-bottom-small">Instructions</h1>
+                <p>Experience what AI·Lab offers in this 360 interactive platform.</p>
+                <ul class="list">
+                    <li><strong>Click and drag</strong> to look around the room</li>
+                    <li><strong>Click on interactive points</strong> to show additional content</li>
+                    <li><strong>Click on navigational arrows</strong> to move to adjacent rooms</li>
+                </ul>
+            </div>
+
+            <div class="instructions-choose-card">
+                <h1 class="instructions-title margin-bottom-small">Choose a technology to explore</h1>
+                <ul class="buttons">
+                    <li><a onclick="goToThemeMap()" class="btn">5G</a></li>
+                    <li><a onclick="goToThemeMap()" class="btn">AI</a></li>
+                    <li><a onclick="goToThemeMap()" class="btn">CLOUD</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="fiveG" class="fiveG" style="display: none">
+        <img src="images/ui/back-button.png" onclick="goToInstructions()" alt="3d-model" class="back-image">
+        <div class="content">
+            <div class="model">
+                <div class="model-box fiveG-model">
+                    <img src="images/ui/3d_model_view_placeholder.png" alt="3d-model" class="model-image">
+                </div>
+                <div class="rotate-content">
+                    <img src="images/ui/icon_3d_rotate.png" alt="rotate" class="rotate-image">
+                    <p>DRAG TO ROTATE</p>
+                </div>
+            </div>
+            <div class="fiveG-card">
+                <h1 class="instructions-title margin-bottom-small">5G</h1>
+                <ul class="content-list">
+                    <li>Content Name 1</li>
+                    <li>Content Name 2</li>
+                    <li>Content Name 3</li>
+                    <li>Content Name 4</li>
+                    <li>Content Name 5</li>
+                    <li>Content Name 6</li>
+                    <li>Content Name 7</li>
+                    <li>Content Name 8</li>
+                </ul>
+            </div>
+        </div>
+        <a class="btn">ENTER</a>
+    </div>
+
+    <script type="text/javascript">
+        function checkFormAndRedirect() {
+            var email = document.querySelector("#email");
+            console.log(document)
+            if (validateEmail(email.value)) {
+                console.log('valid')
+                goToInstructions()
+            } else {
+                document.getElementById('error').style.opacity = '1';
+            }
+        }
+
+        function validateEmail(email) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                return (true)
+            }
+            return (false)
+        }
+
+        function goToThemeMap() {
+            document.getElementById('instructions').style.display = 'none'
+            document.getElementById('fiveG').style.display = 'flex'
+        }
+
+        function goToInstructions() {
+            document.getElementById('fiveG').style.display = 'none'
+            document.getElementById('introduction').style.display = 'none'
+            document.getElementById('instructions').style.display = 'flex'
+        }
+    </script>
+</body>
+
+</html>

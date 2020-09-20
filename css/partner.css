@@ -1,0 +1,173 @@
+#partners-content .partner-content {
+    margin: auto;
+    text-align: center;
+}
+#partner-exit-btn{
+    display:block;
+    margin-top: 2rem !important;
+}
+#partner-image{
+    width:300px;
+    max-width: 80%;
+}
+div#partner-top-tab{
+    padding-bottom: 1rem;
+}
+#partner-jumbotron{
+    display: flex;
+    background-color:rgba(0, 0, 0, 0);
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-height: 767px) and (max-width: 354px){
+    #partners-background.partners-background {
+        padding-top: 0px !important;    
+    }
+    
+    #partners-logos-container {
+        height: calc(100vh - 250px);
+    }
+}
+
+@media screen and (max-height: 767px) and (min-width: 355px){
+    #partners-background.partners-background {
+        padding-top: 0px !important;    
+    }
+    
+    #partners-logos-container {
+        height: calc(100vh - 285px);
+    }
+}
+
+@media screen and (min-height: 768px)  and (max-width: 354px){
+    #partners-logos-container {
+        height: calc(100vh - 363px);
+    }
+}
+
+@media screen and (min-height: 768px)  and (min-width: 355px){
+    #partners-logos-container {
+        height: calc(100vh - 336px);
+    }
+}
+
+@media screen and (max-width: 575px) and (orientation:landscape){  
+    #partners-background.partners-background{
+        width: 100%;
+        margin-top: 1rem!important;
+    }
+    #partners-logos .partners-logo{
+        width: 50%;
+    }
+    #partners-logos-container {
+        height: calc(100vh - 240px);
+    }
+    button.partner-btn.h-100{
+        width: 70%;
+    }    
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){  
+    #partners-background.partners-background{
+        width: 80%;
+    } 
+    #partners-logos .partners-logo{
+        
+    }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (max-width: 991px){  
+    #partners-background.partners-background{
+        width: 70%;
+    }
+    #partners-logos .partners-logo{
+        
+    }
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px){ 
+    #partners-background.partners-background{
+        width: 70%;
+    }
+    #partners-logos .partners-logo{
+        
+    }
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+     #partners-background.partners-background{
+        width: 70%;
+    }  
+    #partners-logos .partners-logo{
+        
+    }
+}
+
+/*----------portrait--------------*/
+@media screen and (max-width: 575px) and (orientation:portrait){  
+    #partners-background.partners-background{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-top: 0rem!important;
+    }
+    #partner-close-bar{
+        width: 2rem;
+        height: .3rem;
+    }
+    #partners-title{
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    button.partner-btn.h-100{
+        width: 90%;
+    }
+    button.partner-btn.h-100 .img-fluid.p-4{
+        padding: 0rem!important;
+    }
+    #partners-logos .partners-logo{
+        width: 50%;
+    }    
+    #partners-content .partner-content {
+        height: 13rem;
+        overflow-y: auto;
+    }
+    #partner-close-btn{
+        width: 2.5rem;
+        line-height: .5rem;
+    }
+    #partner-logo{
+        display: flex;
+        justify-content: center;
+    }
+    #partner-logo .ml-5{
+        width: 70%;
+        margin: 0px!important;
+        justify-content: center;
+    }
+    #partner-description {
+        font-size: .7rem;
+    }
+    #partner{
+        margin-left: 0rem!important;
+        margin-right: 0rem!important;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 575px) and (orientation:portrait){  
+    #partners-title{
+        font-size: 1.15rem;
+        letter-spacing: 0.15rem;
+    }
+    #partner-close-bar {
+        width: 2.5rem;
+        height: .4rem;
+    }
+    #partners-content .partner-content {
+        height: calc(100vh - 470px);
+    }
+}
